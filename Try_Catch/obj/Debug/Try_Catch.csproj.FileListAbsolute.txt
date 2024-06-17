@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\obj\Debug\Try_Catch.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\obj\Debug\Try_Catch.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\bin\Debug\Try_Catch.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\bin\Debug\Try_Catch.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\bin\Debug\Try_Catch.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\obj\Debug\Try_Catch.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Try_Catch\obj\Debug\Try_Catch.pdb

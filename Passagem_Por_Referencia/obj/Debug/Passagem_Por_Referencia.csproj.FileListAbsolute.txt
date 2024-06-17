@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\bin\Debug\Passagem_Por_Referencia.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\bin\Debug\Passagem_Por_Referencia.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\bin\Debug\Passagem_Por_Referencia.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\obj\Debug\Passagem_Por_Referencia.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\obj\Debug\Passagem_Por_Referencia.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\obj\Debug\Passagem_Por_Referencia.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Passagem_Por_Referencia\obj\Debug\Passagem_Por_Referencia.pdb

@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\bin\Debug\ArgumentoOUT.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\bin\Debug\ArgumentoOUT.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\bin\Debug\ArgumentoOUT.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\obj\Debug\ArgumentoOUT.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\obj\Debug\ArgumentoOUT.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\obj\Debug\ArgumentoOUT.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoOUT\obj\Debug\ArgumentoOUT.pdb

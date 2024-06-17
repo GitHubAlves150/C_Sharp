@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\bin\Debug\Enum.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\bin\Debug\Enum.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\bin\Debug\Enum.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\obj\Debug\Enum.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\obj\Debug\Enum.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\obj\Debug\Enum.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Enum\obj\Debug\Enum.pdb
