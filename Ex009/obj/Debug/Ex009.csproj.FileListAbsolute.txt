@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\bin\Debug\Ex009.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\bin\Debug\Ex009.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\bin\Debug\Ex009.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\obj\Debug\Ex009.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\obj\Debug\Ex009.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\obj\Debug\Ex009.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\Ex009\obj\Debug\Ex009.pdb

@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\bin\Debug\ArgumentoParametros.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\bin\Debug\ArgumentoParametros.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\bin\Debug\ArgumentoParametros.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\obj\Debug\ArgumentoParametros.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\obj\Debug\ArgumentoParametros.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\obj\Debug\ArgumentoParametros.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\ArgumentoParametros\obj\Debug\ArgumentoParametros.pdb
