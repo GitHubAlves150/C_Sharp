@@ -1,0 +1,7 @@
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\bin\Debug\pooFrases.exe.config
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\bin\Debug\pooFrases.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\bin\Debug\pooFrases.pdb
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\obj\Debug\pooFrases.csproj.AssemblyReference.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\obj\Debug\pooFrases.csproj.CoreCompileInputs.cache
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\obj\Debug\pooFrases.exe
+C:\Users\Luiz Otavio\Documents\GitHub\Exercicios-CSharp\pooFrases\obj\Debug\pooFrases.pdb

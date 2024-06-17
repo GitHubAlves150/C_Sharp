@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Luiz Otavio\\Documents\\GitHub\\Exercicios-CSharp\\Passagem_Por_Referencia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF581D23-EA12-4BAD-829A-0ACD1AAC01BA}|Passagem_Por_Referencia.csproj|c:\\users\\luiz otavio\\documents\\github\\exercicios-csharp\\passagem_por_referencia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF581D23-EA12-4BAD-829A-0ACD1AAC01BA}|Passagem_Por_Referencia.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Luiz Otavio\\Documents\\GitHub\\Exercicios-CSharp\\Passagem_Por_Referencia\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Luiz Otavio\\Documents\\GitHub\\Exercicios-CSharp\\Passagem_Por_Referencia\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T19:41:57.807Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
