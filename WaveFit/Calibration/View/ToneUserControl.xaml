@@ -1,0 +1,214 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.ToneUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+
+    <Grid x:Name="ToneTab" Visibility="Visible">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="Audion16Grid" Visibility="Visible">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A16TF"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Frequência do alerta"
+                          Grid.Row="1"
+                          Margin="5" />
+                <ComboBox x:Name="A16TL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do alerta"
+                          Grid.Row="3"
+                          Margin="5" />
+                <ComboBox x:Name="A16PST"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta ao mudar de programa"
+                          Grid.Row="5"
+                          Margin="5" />
+                <ComboBox x:Name="A16LBWT"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta bateria baixa"
+                          Grid.Row="7"
+                          Margin="5" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion8Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A8TF"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Frequência do alerta"
+                          Grid.Row="1"
+                          Margin="5" />
+                <ComboBox x:Name="A8TL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do alerta"
+                          Grid.Row="3"
+                          Margin="5" />
+                <ComboBox x:Name="A8PST"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta ao mudar de programa"
+                          Grid.Row="5"
+                          Margin="5" />
+                <ComboBox x:Name="A8LBWT"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta bateria baixa"
+                          Grid.Row="7"
+                          Margin="5" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion6Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A6TF"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Frequência do alerta"
+                          Grid.Row="1"
+                          Margin="5" />
+                <ComboBox x:Name="A6TL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do alerta"
+                          Grid.Row="3"
+                          Margin="5" />
+                <ComboBox x:Name="A6PST"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta ao mudar de programa"
+                          Grid.Row="5"
+                          Margin="5" />
+                <ComboBox x:Name="A6LBWT"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta bateria baixa"
+                          Grid.Row="7"
+                          Margin="5" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion4Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A4TF"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Frequência do alerta"
+                          Grid.Row="1"
+                          Margin="5" />
+                <ComboBox x:Name="A4TL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do alerta"
+                          Grid.Row="3"
+                          Margin="5" />
+                <ComboBox x:Name="A4PST"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta ao mudar de programa"
+                          Grid.Row="5"
+                          Margin="5" />
+                <ComboBox x:Name="A4LBWT"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta bateria baixa"
+                          Grid.Row="7"
+                          Margin="5" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="SpinNRGrid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="SpinNRTF"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Frequência do alerta"
+                          Grid.Row="1"
+                          Margin="5" />
+                <ComboBox x:Name="SpinNRTL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do alerta"
+                          Grid.Row="3"
+                          Margin="5" />
+                <ComboBox x:Name="SpinNRPST"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta ao mudar de programa"
+                          Grid.Row="5"
+                          Margin="5" />
+                <ComboBox x:Name="SpinNRLBWT"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Alerta bateria baixa"
+                          Grid.Row="7"
+                          Margin="5" />
+            </Grid>
+        </Grid>
+
+        <Button Grid.Row="1" Width="25" Height="25" x:Name="ToneButton" Background="#009CA3"
+          IsEnabled="{Binding DataContext.ControlsEnabled}"
+          Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+          ToolTip="MaterialDesignFloatingActionMiniLightButton">
+            <md:PackIcon Width="20" Height="20" Kind="VolumeHigh" Foreground="White" />
+        </Button>
+    </Grid>
+</UserControl>

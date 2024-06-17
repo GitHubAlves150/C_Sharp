@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4183C101-7E8D-4AF9-B47E-880585C5AB7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WaveFit2</RootNamespace>
+    <AssemblyName>WaveFit2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ativo-3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.16.1.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.16.1\lib\net472\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="Correios.NET, Version=1.4.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios.NET.1.4.4\lib\netstandard2.0\Correios.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Dotmim.Sync.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dotmim.Sync.Core.1.0.0-beta-1517\lib\netstandard2.0\Dotmim.Sync.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Dotmim.Sync.PostgreSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dotmim.Sync.PostgreSql.1.0.0-beta-1517\lib\netstandard2.0\Dotmim.Sync.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.0-preview2-24180-01\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.0-preview2-24180-01\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=6.4.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.6.4.3\lib\net461\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.9.1\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericAudion16, Version=5.1.0.1820, Culture=neutral, PublicKeyToken=c2a9448d6df6e378, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Audion16\GenericAudion16.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericCommon, Version=5.1.0.1820, Culture=neutral, PublicKeyToken=cc7c97acdf06a99b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\INTRICON\Generic Driver (API)\Generic Driver (API)\Installer\GenericDriver5.1.0.1820\GenericCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl, Version=3.5.1.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControl.3.5.1\lib\net48\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.3.1.0-ci644\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=5.0.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.5.0.1-ci644\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.6.0.0-beta1\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Http.6.0.0\lib\net461\Microsoft.Extensions.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.9.0.0-preview.4.24266.19\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.77\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=5.0.16.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.5.0.16\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.Json.NET, Version=5.0.16.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.Json.NET.5.0.16\lib\netstandard2.0\Npgsql.Json.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=2014.1.1.1, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=2014.1.1.1, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.9.0.0-preview.4.24266.19\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.9.0.0-preview.4.24266.19\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.7.0.0-preview.2.22152.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.0-preview.4.24266.19\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.0-preview.4.24266.19\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.9.0.0-preview.4.24266.19\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Dataflow.9.0.0-preview.4.24266.19\lib\net462\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Audiogram\ViewModel\AudiogramTableModel.cs" />
+    <Compile Include="Audiogram\ViewModel\AudiogramViewModel.cs" />
+    <Compile Include="Audiogram\ViewModel\AudiographModel.cs" />
+    <Compile Include="Audiogram\View\AudiogramSelectForm.xaml.cs">
+      <DependentUpon>AudiogramSelectForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\AudiogramUserControl.xaml.cs">
+      <DependentUpon>AudiogramUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\AudiographUserControl.xaml.cs">
+      <DependentUpon>AudiographUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\ExamInformation.xaml.cs">
+      <DependentUpon>ExamInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\LogoUserControl.xaml.cs">
+      <DependentUpon>LogoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\MaskUserControl.xaml.cs">
+      <DependentUpon>MaskUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\MeatoscopyUserControl.xaml.cs">
+      <DependentUpon>MeatoscopyUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\ObsUserControl.xaml.cs">
+      <DependentUpon>ObsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\PrintTemplateUserControl.xaml.cs">
+      <DependentUpon>PrintTemplateUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\StaticAudiogramUserControl.xaml.cs">
+      <DependentUpon>StaticAudiogramUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Audiogram\View\StaticAudiographUserControl.xaml.cs">
+      <DependentUpon>StaticAudiographUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\Class\HearingAidCurve.cs" />
+    <Compile Include="Calibration\Class\WaveRule.cs" />
+    <Compile Include="Calibration\ViewModel\Audion16ViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\Audion4ViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\Audion6ViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\Audion8ViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\CalibrationDictionaryViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\GainPlotViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\HIDictionaryViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\IntriconViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\OutputPlotViewModel.cs" />
+    <Compile Include="Calibration\ViewModel\SpinNRViewModel.cs" />
+    <Compile Include="Calibration\View\AdjustTabUserControl.xaml.cs">
+      <DependentUpon>AdjustTabUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\AlgorithmUserControl.xaml.cs">
+      <DependentUpon>AlgorithmUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\CalibrationUserControl.xaml.cs">
+      <DependentUpon>CalibrationUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\DetectHIWindow.xaml.cs">
+      <DependentUpon>DetectHIWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\EqualyzerUserControl.xaml.cs">
+      <DependentUpon>EqualyzerUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\FilterUserControl.xaml.cs">
+      <DependentUpon>FilterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\FittingAssistance.xaml.cs">
+      <DependentUpon>FittingAssistance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\GainPlotUserControl.xaml.cs">
+      <DependentUpon>GainPlotUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\MicrophoneUserControl.xaml.cs">
+      <DependentUpon>MicrophoneUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\OutputUserControl.xaml.cs">
+      <DependentUpon>OutputUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\PowerOnUserControl.xaml.cs">
+      <DependentUpon>PowerOnUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\SimulationUserControl.xaml.cs">
+      <DependentUpon>SimulationUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\ToneUserControl.xaml.cs">
+      <DependentUpon>ToneUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calibration\View\VolumeUserControl.xaml.cs">
+      <DependentUpon>VolumeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CRUD\Crud.cs" />
+    <Compile Include="Database\Map\AdjustmentMap.cs" />
+    <Compile Include="Database\Map\AudioEvaluationMap.cs" />
+    <Compile Include="Database\Map\AudiogramMap.cs" />
+    <Compile Include="Database\Map\AudiometerMap.cs" />
+    <Compile Include="Database\Map\CalibrationMap.cs" />
+    <Compile Include="Database\Map\FrequencyMap.cs" />
+    <Compile Include="Database\Map\HealthCenterMap.cs" />
+    <Compile Include="Database\Map\HearingAidGainPlotMap.cs" />
+    <Compile Include="Database\Map\HearingAidMap.cs" />
+    <Compile Include="Database\Map\LocationMap.cs" />
+    <Compile Include="Database\Map\LoginMap.cs" />
+    <Compile Include="Database\Map\PatientMap.cs" />
+    <Compile Include="Database\Map\PlaceMap.cs" />
+    <Compile Include="Database\Map\SessionMap.cs" />
+    <Compile Include="Database\Model\AdjustmentModel.cs" />
+    <Compile Include="Database\Model\AudioEvaluationModel.cs" />
+    <Compile Include="Database\Model\AudiogramModel.cs" />
+    <Compile Include="Database\Model\AudiometerModel.cs" />
+    <Compile Include="Database\Model\CalibrationModel.cs" />
+    <Compile Include="Database\Model\FrequencyModel.cs" />
+    <Compile Include="Database\Model\HealthCenterModel.cs" />
+    <Compile Include="Database\Model\HearingAidGainPlotModel.cs" />
+    <Compile Include="Database\Model\HearingAidModel.cs" />
+    <Compile Include="Database\Model\LocationModel.cs" />
+    <Compile Include="Database\Model\LoginModel.cs" />
+    <Compile Include="Database\Model\PatientModel.cs" />
+    <Compile Include="Database\Model\PlaceModel.cs" />
+    <Compile Include="Database\Model\SessionModel.cs" />
+    <Compile Include="Database\Table\AudiometerTable.cs" />
+    <Compile Include="Database\Table\HealthCenterTable.cs" />
+    <Compile Include="Database\Table\LocationTable.cs" />
+    <Compile Include="Database\Table\LoginTable.cs" />
+    <Compile Include="Database\Table\PlaceTable.cs" />
+    <Compile Include="Database\WaveFitContext.cs" />
+    <Compile Include="Home\ViewModel\HomeViewModel.cs" />
+    <Compile Include="Home\View\HomeUserControl.xaml.cs">
+      <DependentUpon>HomeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home\View\WhiteNoiseWindow.xaml.cs">
+      <DependentUpon>WhiteNoiseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intricon\Audion16.cs" />
+    <Compile Include="Intricon\Audion4.cs" />
+    <Compile Include="Intricon\Audion6.cs" />
+    <Compile Include="Intricon\Audion8.cs" />
+    <Compile Include="Intricon\FileUtilities.cs" />
+    <Compile Include="Intricon\IntriconPlotObject.cs" />
+    <Compile Include="Intricon\RTI_TargetCalc.cs" />
+    <Compile Include="Intricon\SpinNR.cs" />
+    <Compile Include="Intricon\Utilities.cs" />
+    <Compile Include="Login\ViewModel\LoginViewModel.cs" />
+    <Compile Include="Login\View\LoginUserControl.xaml.cs">
+      <DependentUpon>LoginUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\View\OfflineModeView.xaml.cs">
+      <DependentUpon>OfflineModeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\View\RegisterUserControl.xaml.cs">
+      <DependentUpon>RegisterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main\View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405151809311_InitialCreate.cs" />
+    <Compile Include="Migrations\202405151809311_InitialCreate.Designer.cs">
+      <DependentUpon>202405151809311_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405151810448_AddLocation_Place.cs" />
+    <Compile Include="Migrations\202405151810448_AddLocation_Place.Designer.cs">
+      <DependentUpon>202405151810448_AddLocation_Place.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405211841054_AddHealthCenter_Audiometer.cs" />
+    <Compile Include="Migrations\202405211841054_AddHealthCenter_Audiometer.designer.cs">
+      <DependentUpon>202405211841054_AddHealthCenter_Audiometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405231715257_HearingAidReceptor.cs" />
+    <Compile Include="Migrations\202405231715257_HearingAidReceptor.designer.cs">
+      <DependentUpon>202405231715257_HearingAidReceptor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Patient\ViewModel\PatientViewModel.cs" />
+    <Compile Include="Patient\View\ActivePatientUserControl.xaml.cs">
+      <DependentUpon>ActivePatientUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\View\DisabledPatientUserControl.xaml.cs">
+      <DependentUpon>DisabledPatientUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\View\PatientForm.xaml.cs">
+      <DependentUpon>PatientForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\View\PatientUserControl.xaml.cs">
+      <DependentUpon>PatientUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\ViewModel\RecordAudiogramViewModel.cs" />
+    <Compile Include="Records\ViewModel\RecordCalibrationViewModel.cs" />
+    <Compile Include="Records\View\RecordAudiogramUserControl.xaml.cs">
+      <DependentUpon>RecordAudiogramUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Records\View\RecordCalibrationUserControl.xaml.cs">
+      <DependentUpon>RecordCalibrationUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Records\View\RecordUserControl.xaml.cs">
+      <DependentUpon>RecordUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Class\ByteToImageConverter.cs" />
+    <Compile Include="Settings\Class\CombinedData.cs" />
+    <Compile Include="Settings\ViewModel\HealthCenterSettingViewModel.cs" />
+    <Compile Include="Settings\ViewModel\SettingsViewModel.cs" />
+    <Compile Include="Settings\View\EditProfileUserControl.xaml.cs">
+      <DependentUpon>EditProfileUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\View\HealthCenterForms.xaml.cs">
+      <DependentUpon>HealthCenterForms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\View\HealthCenterUserControl.xaml.cs">
+      <DependentUpon>HealthCenterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\View\ProfileCardUserControl.xaml.cs">
+      <DependentUpon>ProfileCardUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\View\SettingsUserControl.xaml.cs">
+      <DependentUpon>SettingsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\View\UsersDatagridUserControl.xaml.cs">
+      <DependentUpon>UsersDatagridUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\ValidationPassword.cs" />
+    <Compile Include="Validation\ValidationRegister.cs" />
+    <Page Include="Audiogram\View\AudiogramSelectForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\AudiogramUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\AudiographUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\ExamInformation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\LogoUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\MaskUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\MeatoscopyUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\ObsUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\PrintTemplateUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\StaticAudiogramUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Audiogram\View\StaticAudiographUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Calibration\View\AdjustTabUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\AlgorithmUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\CalibrationUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\DetectHIWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\EqualyzerUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\FilterUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\FittingAssistance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Calibration\View\GainPlotUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\MicrophoneUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\OutputUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\PowerOnUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\SimulationUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\ToneUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Calibration\View\VolumeUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Home\View\HomeUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Home\View\WhiteNoiseWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\View\LoginUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\View\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\View\OfflineModeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\View\RegisterUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Main\View\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Patient\View\ActivePatientUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Patient\View\DisabledPatientUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Patient\View\PatientForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Patient\View\PatientUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Records\View\RecordAudiogramUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Records\View\RecordCalibrationUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Records\View\RecordUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Settings\View\EditProfileUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Settings\View\HealthCenterForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings\View\HealthCenterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings\View\ProfileCardUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Settings\View\SettingsUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Settings\View\UsersDatagridUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202405151809311_InitialCreate.resx">
+      <DependentUpon>202405151809311_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405151810448_AddLocation_Place.resx">
+      <DependentUpon>202405151810448_AddLocation_Place.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405211841054_AddHealthCenter_Audiometer.resx">
+      <DependentUpon>202405211841054_AddHealthCenter_Audiometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405231715257_HearingAidReceptor.resx">
+      <DependentUpon>202405231715257_HearingAidReceptor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Intricon\Dll\Audion4\Audion4.lib" />
+    <None Include="Intricon\Dll\Audion6\Audion6.lib" />
+    <None Include="Intricon\Dll\Audion8\Audion8.lib" />
+    <None Include="Intricon\Dll\Complementary HI\Hiprowin.d" />
+    <None Include="Intricon\Dll\Complementary HI\Hiprowin.e" />
+    <None Include="Intricon\Dll\Complementary HI\Hiprowin.f" />
+    <None Include="Intricon\Dll\Complementary HI\Hiprowin.nl" />
+    <None Include="Intricon\Dll\Complementary HI\Hiprowin.uk" />
+    <None Include="Intricon\Dll\SpinNR\SpinNR.lib" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="WaveFit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TitleWave.png" />
+    <Resource Include="Ativo-3.ico" />
+    <Content Include="Database\Backup\backup_10052024.sql" />
+    <Content Include="Database\Backup\backup_13052024.sql" />
+    <Content Include="Database\Backup\backup_14052024.sql" />
+    <Content Include="Database\Backup\backup_15052024.sql" />
+    <Content Include="Database\Backup\backup_16052024.sql" />
+    <Content Include="Intricon\Dll\Audion16\GenericAudion16.dll" />
+    <Content Include="Intricon\Dll\Audion4\Audion4.dll" />
+    <Content Include="Intricon\Dll\Audion4\Audion4.h" />
+    <Content Include="Intricon\Dll\Audion6\Audion6.dll" />
+    <Content Include="Intricon\Dll\Audion6\Audion6.h" />
+    <Content Include="Intricon\Dll\Audion8\Audion8.dll" />
+    <Content Include="Intricon\Dll\Audion8\Audion8.h" />
+    <Content Include="Intricon\Dll\Complementary HI\ACSWIT32.DLL" />
+    <Content Include="Intricon\Dll\Complementary HI\COM_HOOK.EXE" />
+    <Content Include="Intricon\Dll\Complementary HI\DSXXX.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\FTChipID.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\FTD2XX.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\GRTI.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\hidapi.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\HIP32225.DLL" />
+    <Content Include="Intricon\Dll\Complementary HI\HIP32302.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\HIP32401.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\Hiprowin.i" />
+    <Content Include="Intricon\Dll\Complementary HI\MCard32.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\MLRuntime.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\msvcr100.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\nl_threewire.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\RTI_TargetCalc.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\Swboxw32.dll" />
+    <Content Include="Intricon\Dll\Complementary HI\Swboxwin.dll" />
+    <Content Include="Intricon\Dll\GenericCommon.dll" />
+    <Content Include="Intricon\Dll\GenericDriver.dll" />
+    <Content Include="Intricon\Dll\OxyPlot.dll" />
+    <Content Include="Intricon\Dll\OxyPlot.Wpf.dll" />
+    <Content Include="Intricon\Dll\SpinNR\SpinNR.dll" />
+    <Content Include="Intricon\Dll\SpinNR\SpinNR.h" />
+    <Resource Include="Resources\Ativo-2.ico" />
+    <Resource Include="Resources\Ativo-3.ico" />
+    <Resource Include="Resources\newLogo.png" />
+    <Resource Include="Resources\Audiogram.png" />
+    <Resource Include="Resources\audiometer.png" />
+    <Resource Include="Resources\defaultHI.png" />
+    <Resource Include="Resources\defaultHI2.png" />
+    <Resource Include="Resources\DUMONT.png" />
+    <Resource Include="Resources\DUMONT_EDIT.png" />
+    <Resource Include="Resources\hearing-aid.png" />
+    <Resource Include="Resources\Hearing.png" />
+    <Resource Include="Resources\HearingAidIDLE.png" />
+    <Resource Include="Resources\ilustracao_error.png" />
+    <Resource Include="Resources\LANDELL.png" />
+    <Resource Include="Resources\LANDELL_EDIT.png" />
+    <Resource Include="Resources\LoginWave-removebg-preview.png" />
+    <Resource Include="Resources\LoginWave.jpg" />
+    <Resource Include="Resources\LoginWave.png" />
+    <Resource Include="Resources\logoaudiometry.png" />
+    <Resource Include="Resources\Logo_Wavetech.ico" />
+    <Resource Include="Resources\Logo_Wavetech.png" />
+    <Resource Include="Resources\LVANoAnswer.png" />
+    <Resource Include="Resources\LVANoAnswerMask.png" />
+    <Resource Include="Resources\LVOAnswer.png" />
+    <Resource Include="Resources\LVONoAnswerMask.png" />
+    <Resource Include="Resources\MAUÁ.png" />
+    <Resource Include="Resources\MAUÁ_EDIT.png" />
+    <Resource Include="Resources\RecModel\OSPL90.txt" />
+    <Resource Include="Resources\LoginWaveTest.png" />
+    <Content Include="Resources\Ruido Branco 15min.wav" />
+    <Resource Include="Resources\RVANoAnswer.png" />
+    <Resource Include="Resources\RVANoAnswerMask.png" />
+    <Resource Include="Resources\RVOAnswer.png" />
+    <Resource Include="Resources\RVONoAnswerMask.png" />
+    <Resource Include="Resources\WaveFit-removebg-preview.png" />
+    <Resource Include="Resources\WaveFit.ico" />
+    <Resource Include="Resources\WaveFit.png" />
+    <Resource Include="Resources\AudiometrySymbols\LUCL.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVA.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVAMask.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVAMaskNoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVANoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVO.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVOMask.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVOMaskNoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\LVONoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\RUCL.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVA.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVAMask.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVAMaskNoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVANoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVO.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVOMaksNoAnswer.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVOMask.png" />
+    <Resource Include="Resources\AudiometrySymbols\RVONoAnswer.png" />
+    <Resource Include="Resources\MicModel\APT-D Sonion 6295.txt" />
+    <Resource Include="Resources\Profiles\arctic-fox.png" />
+    <Resource Include="Resources\Profiles\bear.png" />
+    <Resource Include="Resources\Profiles\cat.png" />
+    <Resource Include="Resources\Profiles\chicken.png" />
+    <Resource Include="Resources\Profiles\dog.png" />
+    <Resource Include="Resources\Profiles\koala.png" />
+    <Resource Include="Resources\Profiles\panda.png" />
+    <Resource Include="Resources\Profiles\sea-lion.png" />
+    <Resource Include="Resources\Profiles\sloth.png" />
+    <Resource Include="Resources\RecModel\BVA321.txt" />
+    <Resource Include="Resources\RecModel\BVA530.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.5.0.1-ci644\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.5.0.1-ci644\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.0-preview2-24180-01\build\EntityFramework.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.5.0.1-ci644\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.0.1-ci644\build\MaterialDesignThemes.targets')" />
+</Project>

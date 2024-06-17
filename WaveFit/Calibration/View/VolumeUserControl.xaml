@@ -1,0 +1,250 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.VolumeUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+    <Grid>
+        <Grid Grid.Column="0" x:Name="Audion8VC"
+              Visibility="Visible">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="Audion8VCMode"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Mode" />
+
+            <Grid Grid.Row="1" x:Name="Audion8Analog"
+                  Visibility="Collapsed">
+                <ComboBox Margin="5" x:Name="Audion8VCAR"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Analog Range" />
+            </Grid>
+
+            <Grid Grid.Row="2" x:Name="Audion8Digital"
+                  Visibility="Collapsed">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="9*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="5" Text="Step Size"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+
+                    <Slider x:Name="Audion8StepSizeSlider"
+                        Maximum="0"
+                        Minimum="-40"
+                        IsSnapToTickEnabled="True"
+                        TickFrequency="2"
+                        TickPlacement="BottomRight"
+                        Style="{StaticResource SliderBaseStyle}"
+                        HorizontalAlignment="Center"
+                        Orientation="Vertical"
+                        Value="0"
+                        Grid.Row="1"
+                        Margin="5"
+                        Foreground="#009CA3" />
+
+                    <TextBlock Margin="5" x:Name="ValueAudion8StepSize"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="9*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="5" Text="Number of Steps"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+
+                    <Slider x:Name="Audion8StepNumberSlider"
+                        Maximum="0"
+                        Minimum="-40"
+                        IsSnapToTickEnabled="True"
+                        TickFrequency="2"
+                        TickPlacement="BottomRight"
+                        Style="{StaticResource SliderBaseStyle}"
+                        HorizontalAlignment="Center"
+                        Orientation="Vertical"
+                        Value="0"
+                        Grid.Row="1"
+                        Margin="5"
+                        Foreground="#009CA3" />
+
+                    <TextBlock Margin="5" x:Name="ValueAudion8StepNumber"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="0" x:Name="Audion4VC"
+              Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="Audion4VCEnable"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Enable" />
+
+            <Grid Grid.Row="1" x:Name="Audion4Mode"
+                  Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ComboBox Margin="5" x:Name="Audion4VCBeep"
+                      Grid.Column="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Beep Enable" />
+                <ComboBox Margin="5" x:Name="Audion4VCMode"
+                      Grid.Column="1"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Mode" />
+            </Grid>
+
+            <Grid Grid.Row="2" x:Name="Audion4Analog"
+                  Visibility="Collapsed">
+                <ComboBox Margin="5" x:Name="Audion4VCAR"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Analog Range" />
+            </Grid>
+
+            <Grid Grid.Row="3" x:Name="Audion4Digital"
+                  Visibility="Collapsed">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="9*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="5" Text="Step Size"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+
+                    <Slider x:Name="Audion4StepSizeSlider"
+                        Maximum="0"
+                        Minimum="-40"
+                        IsSnapToTickEnabled="True"
+                        TickFrequency="2"
+                        TickPlacement="BottomRight"
+                        Style="{StaticResource SliderBaseStyle}"
+                        HorizontalAlignment="Center"
+                        Orientation="Vertical"
+                        Value="0"
+                        Grid.Row="1"
+                        Margin="5"
+                        Foreground="#009CA3" />
+
+                    <TextBlock Margin="5" x:Name="ValueAudion4StepSize"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="9*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="5" Text="Number of Steps"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+
+                    <Slider x:Name="Audion4StepNumberSlider"
+                        Maximum="0"
+                        Minimum="-40"
+                        IsSnapToTickEnabled="True"
+                        TickFrequency="2"
+                        TickPlacement="BottomRight"
+                        Style="{StaticResource SliderBaseStyle}"
+                        HorizontalAlignment="Center"
+                        Orientation="Vertical"
+                        Value="0"
+                        Grid.Row="1"
+                        Margin="5"
+                        Foreground="#009CA3" />
+
+                    <TextBlock Margin="5" x:Name="ValueAudion4StepNumber"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="0" x:Name="SpinNRVC"
+              Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="SpinNRVCMode"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Mode" />
+
+            <Grid Grid.Row="1" x:Name="SpinNRAnalog"
+                  Visibility="Collapsed">
+                <ComboBox Margin="5" x:Name="SpinNRVCAR"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Analog Range" />
+            </Grid>
+
+            <Grid Grid.Row="1" x:Name="SpinNRRocker"
+                  Visibility="Collapsed">
+                <ComboBox Margin="5" x:Name="SpinNRVCRR"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Volume Control Rocker Range" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

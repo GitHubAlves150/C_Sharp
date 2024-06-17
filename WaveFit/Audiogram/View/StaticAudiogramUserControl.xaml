@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="WaveFit2.Audiogram.View.StaticAudiogramUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Audiogram.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignHeight="698"
+             d:DesignWidth="1126" Background="White">
+    <Grid>
+
+        <!--<Grid Grid.Row="0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="PrintButton"
+                    Grid.Column="2"
+                    Background="#009CA3"
+                    Margin="5"
+                    Width="110">
+                <StackPanel Orientation="Horizontal">
+                    <md:PackIcon Kind="Printer"
+                             Foreground="#FFFCF9"
+                                 VerticalAlignment="Center" />
+                    <TextBlock Text="Imprimir"
+                               Margin="5,0,0,0"
+                               Foreground="#FFFCF9"
+                                 VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="CalibrateButton"
+                    Grid.Column="3"
+                    Background="#009CA3"
+                    Margin="5"
+                    Width="110">
+                <StackPanel Orientation="Horizontal">
+                    <md:PackIcon Kind="Sync"
+                             Foreground="#FFFCF9" />
+                    <TextBlock Text="Calibrar"
+                               Margin="5,0,0,0"
+                               Foreground="#FFFCF9" />
+                </StackPanel>
+            </Button>
+        </Grid>-->
+
+        <Grid Grid.Row="0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+
+            <ContentControl x:Name="RightAudiograph" />
+            <ContentControl x:Name="LeftAudiograph"
+                            Grid.Column="1" />
+        </Grid>
+    </Grid>
+</UserControl>

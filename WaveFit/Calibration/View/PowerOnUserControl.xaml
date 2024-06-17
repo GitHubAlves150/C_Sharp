@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.PowerOnUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+
+    <Grid x:Name="PowerOnTab">
+
+        <Grid x:Name="Audion16Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A16POD"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Atraso ao Ligar"
+                          Margin="5"
+                          Grid.Row="1" />
+                <ComboBox x:Name="A16POL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do tom ao Ligar"
+                          Margin="5"
+                          Grid.Row="3" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion8Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A8POD"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Atraso ao Ligar"
+                          Margin="5"
+                          Grid.Row="1" />
+                <ComboBox x:Name="A8POL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do tom ao Ligar"
+                          Margin="5"
+                          Grid.Row="3" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion6Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A6POD"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Atraso ao Ligar"
+                          Margin="5"
+                          Grid.Row="1" />
+                <ComboBox x:Name="A6POL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do tom ao Ligar"
+                          Margin="5"
+                          Grid.Row="3" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion4Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <ComboBox x:Name="A4POD"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Atraso ao Ligar"
+                          Margin="5"
+                          Grid.Row="1" />
+                <ComboBox x:Name="A4POL"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                          md:HintAssist.Hint="Nível do tom ao Ligar"
+                          Margin="5"
+                          Grid.Row="3" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

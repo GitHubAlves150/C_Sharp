@@ -1,0 +1,1744 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.FittingAssistance"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             mc:Ignorable="d"
+             d:DesignHeight="820"
+             d:DesignWidth="350"
+             Background="#f5f5f5">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+            <Button Command="hc:ControlCommands.Close" Grid.Row="0" HorizontalAlignment="left" Foreground="{DynamicResource BackgroundColor}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{StaticResource DeleteFillCircleGeometry}" />
+
+            <TextBlock Text="Fitting Assistance"
+                       FontSize="24"
+                       Grid.Row="1"
+                       Margin="5"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+
+            <hc:SearchBar Grid.Row="3"
+               Width="325"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Style="{StaticResource SearchBarPlus}"
+               hc:InfoElement.Placeholder="Pesquisar"
+               TextAlignment="Center"
+               ToolTip="Digite para pesquisar o tema desejado"
+               hc:InfoElement.ShowClearButton="True"
+               TextChanged="SearchBar_TextChanged" />
+        </Grid>
+
+        <Grid Grid.Row="1" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <hc:SideMenu BorderThickness="1" Width="250"
+                         Background="{StaticResource BackgroundColor}">
+
+                <hc:SideMenuItem Header="Som"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                    <hc:SideMenuItem.Icon>
+                        <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                    </hc:SideMenuItem.Icon>
+
+                    <hc:SideMenuItem Header="Som abafado"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Som muito forte"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Som muito grave"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Som metálico"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeVibrate"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Header="Voz"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                    <hc:SideMenuItem.Icon>
+                        <md:PackIcon Kind="Microphone"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                    </hc:SideMenuItem.Icon>
+
+                    <hc:SideMenuItem Header="Som abafado"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Som muito forte"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Som muito grave"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeMedium"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Som metálico"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 ToolTip="Início">
+                        <hc:SideMenuItem.Icon>
+                            <md:PackIcon Kind="VolumeVibrate"
+                                     Width="25"
+                                     Height="25"
+                                     Foreground="White" />
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+                </hc:SideMenuItem>
+            </hc:SideMenu>
+        </Grid>
+
+        <md:Card Grid.Row="1"
+                 Margin="5"
+                 UniformCornerRadius="14">
+            <hc:ScrollViewer VerticalScrollBarVisibility="Auto"
+                          Grid.Row="1"
+                          Padding="5">
+
+                <Grid Grid.Row="1" x:Name="ExpanderGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                    </Grid.RowDefinitions>
+
+                    <md:Card Grid.Row="0"
+                     Margin="5"
+                     Padding="4"
+                     UniformCornerRadius="14"
+                     Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander  IsExpanded="False" Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Som metálico"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               FontWeight="Bold"
+                                               Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0"
+               Text="O som do aparelho apresenta tinidos, lembrando sons de latas ou metais em atrito."
+               TextWrapping="Wrap"
+               Foreground="White" />
+
+                                    <TextBlock Grid.Row="1"
+               Text="Solução:"
+               FontWeight="Bold"
+               TextWrapping="Wrap"
+               Foreground="White"
+               Margin="0,10,0,0" />
+
+                                    <TextBlock Grid.Row="2"
+               Text="• Reduzir o ganho em altas frequências."
+               TextWrapping="Wrap"
+               Foreground="White" />
+
+                                    <TextBlock Grid.Row="3"
+               Text="• Aumentar a compressão em altas frequências."
+               TextWrapping="Wrap"
+               Foreground="White" />
+
+                                    <TextBlock Grid.Row="4"
+               Text="• Habilitar o controle de feedback caso existente."
+               TextWrapping="Wrap"
+               Foreground="White" />
+
+                                    <TextBlock Grid.Row="5"
+               Text="• Som metálico também pode indicar problema no receptor."
+               TextWrapping="Wrap"
+               Foreground="White" />
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="2"
+          Margin="5"
+          Padding="4"
+          UniformCornerRadius="14"
+          Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander  IsExpanded="False" Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Som abafado"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O som produzido se concentra em baixas frequências."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ganho em altas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ponto de joelho do WDRC."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Considere também verificar a limpeza do molde ou aumentar a ventilação."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="4"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander IsExpanded="False" Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Som muito grave"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O som do aparelho é demasiadamente grave."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o ganho em baixas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar a taxa de compressão nas altas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="6"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14"
+                             Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander  IsExpanded="False" Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Som muito forte"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="Todos os sons são intensos demais."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o volume."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Intensificar o AGCO."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="8"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Própria voz ressoando"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O usuário sente a própria voz ressoando dentro da cabeça."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Diminuir a taxa de compressão em baixas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ganho em baixas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Considere também aumentar a ventilação."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="10"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14"
+                             Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Própria voz muito forte"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O usuário ouve sua própria voz de maneira mais intensa que o desejado."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar a taxa de compressão nas altas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Intensificar o AGCO."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o ponto de joelho do WDRC."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="12"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14"
+                             Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Própria voz muito fraca"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O usuário não consegue ouvir sua própria voz da maneira adequada."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir a taxa de compressão em baixas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ganho em baixas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o filtro de graves."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="6">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aliviar o AGCO."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="14"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14"
+                             Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Destaque sons fracos"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="Sons fracos são mais percebidos que os sons de intensidade média."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ponto de joelho para dar mais ganho aos sons médios (65 dBSPL)."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Diminuir a taxa de compressão."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="16"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14"
+                             Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Sons ambientais muito baixos"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="Não se consegue escutar os sons mais suaves o ambiente."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ganho em graves."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o ponto de joelho."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir a taxa de compressão."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="6">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Diminuir os supressores de ruídos suaves, caso houver."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="18"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Sons ambientais muito altos"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="A alta intensidade dos sons do ambiente causa desconforto."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o ganho em graves."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ponto de joelho."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Adicionar supressores de ruídos."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="20"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Vozes suaves muito altas"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O som de vozes suaves está muito intenso."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir a taxa de compressão."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ponto de joelho do WDRC."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="22"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Vozes suaves muito baixas"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O paciente tem dificuldade em ouvir vozes mais suaves."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ganho para sons fracos ou reduzir o ponto de joelho WDRC."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="24"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Problemas de fala com barulho ao fundo"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O paciente não consegue ouvir uma fala clara com ruídos de fundo, no tráfego, dentro do carro, em um restaurante ou uma festa."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Grid.Row="0"
+                               Text="• Reduzir ganho em baixas frequências."
+                               TextWrapping="Wrap"
+                               Foreground="White" />
+
+                                        <TextBlock Grid.Row="1"
+                               Text="• Aumentar compressão em baixas frequências."
+                               TextWrapping="Wrap"
+                               Foreground="White" />
+
+                                        <TextBlock Grid.Row="2"
+                               Text="• Aumentar o ganho nas altas frequências."
+                               TextWrapping="Wrap"
+                               Foreground="White" />
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="26"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Desconforto ao amassar papéis"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="Alguns barulhos são bastante desconfortáveis ao usuário, tais como o de amassar papéis ou de água caindo."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar a taxa de compressão em agudos."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar a taxa de compressão em médios."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir o ganho nas altas frequências."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="6">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Intensificar o AGCO."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="28"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Desconforto frente a ruídos do cotidiano"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O paciente fica desconfortável ao ouvir barulhos do dia a dia, como o de pratos e talheres, carros, tráfego e ruídos de festa."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir filtro de agudos."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Reduzir ganho em graves (e em agudos, se necessário)."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Intensificar o AGCO."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="6">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar a taxa de compressão."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="30"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Ruído do microfone"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O ruído interno do microfone está alto demais."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="10" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ponto de joelho."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Diminuir a taxa de compressão."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+
+                                        <Grid Grid.Row="4">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Caso o microfone continue chiando, provavelmente será necessário trocá-lo."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="32"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Falta de inteligibilidade na fala"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O paciente ouve a fala muito suave, incompreensível, ou sem clareza."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="200" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0"
+                                   Text="• Aumentar o ganho em altas frequências, ou alterar o ponto de joelho do WDRC."
+                                   TextWrapping="Wrap"
+                                   Foreground="White" />
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="34"
+         Margin="5"
+         Padding="4"
+         UniformCornerRadius="14"
+         Background="{StaticResource BackgroundColor}">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Expander Style="{StaticResource BaseStyle}">
+                                <Expander.Header>
+                                    <TextBlock Text="Microfonia"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="White" />
+                                </Expander.Header>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="10" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="O aparelho apita frequentemente."
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <TextBlock Grid.Row="2"
+                           Text="Solução:"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="White" />
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="auto" />
+                                            <RowDefinition Height="auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Grid.Row="0"
+                               Text="• Diminuir o ganho em agudos."
+                               TextWrapping="Wrap"
+                               Foreground="White" />
+
+                                        <TextBlock Grid.Row="1"
+                               Text="• Ativar o supressor de feedback, caso exista no aparelho."
+                               TextWrapping="Wrap"
+                               Foreground="White" />
+
+                                        <TextBlock Grid.Row="2"
+                               Text="• Considere também checar a adaptação e a limpeza do molde ou reduzir o diâmetro da ventilação."
+                               TextWrapping="Wrap"
+                               Foreground="White" />
+                                    </Grid>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </md:Card>
+                </Grid>
+            </hc:ScrollViewer>
+        </md:Card>
+    </Grid>
+</UserControl>

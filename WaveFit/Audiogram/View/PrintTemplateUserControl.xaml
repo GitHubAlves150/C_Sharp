@@ -1,0 +1,1065 @@
+﻿<UserControl x:Class="WaveFit2.Audiogram.View.PrintTemplateUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Audiogram.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Height="28.7cm"
+             Width="20.1cm"
+             Background="White">
+
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0"
+                   x:Name="LogoBox"
+                   Source="/Resources/Logo_Wavetech.png" />
+
+            <Grid Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1"
+                           x:Name="NameTextBox"
+                           Text="WAVETECH SOLUÇOES TECNOLOGICAS LIMITADA"
+                           HorizontalAlignment="Right"
+                           FontSize="12" />
+                <TextBlock Grid.Row="2"
+                           x:Name="AddressTextBox"
+                           Text="Rod. José Carlos Daux, 600 - KM 01 Sala G1 .02, João Paulo"
+                           HorizontalAlignment="Right"
+                           FontSize="12" />
+                <TextBlock Grid.Row="3"
+                           x:Name="CEPTextBox"
+                           Text="CEP: 88030-000"
+                           HorizontalAlignment="Right"
+                           FontSize="12" />
+                <TextBlock Grid.Row="4"
+                           x:Name="CityTextBox"
+                           Text="Florianópolis - SC"
+                           HorizontalAlignment="Right"
+                           FontSize="12" />
+                <TextBlock Grid.Row="5"
+                           x:Name="CNPJTextBox"
+                           Text="CNPJ - 155.658.69/0002-31"
+                           HorizontalAlignment="Right"
+                           FontSize="12" />
+                <TextBlock Grid.Row="6"
+                           x:Name="TelephoneTextBox"
+                           Text="Fone: (48)3025-5858​"
+                           HorizontalAlignment="Right"
+                           FontSize="12" />
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Background="LightGray">
+                <TextBlock Grid.Row="1"
+                       Text="Avaliação Audiológica"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       FontSize="12" />
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2"
+                BorderBrush="Black"
+                BorderThickness="1">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"
+                                       Text="Funcionário/Paciente:"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0" />
+                            <TextBlock Grid.Row="2"
+                                       x:Name="PatientName"
+                                       Margin="10,0,0,0" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"
+                                       Text="Idade:"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0" />
+                            <TextBlock Grid.Row="2"
+                                       x:Name="PatientAge"
+                                       Margin="10,0,0,0" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="2"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"
+                                       Text="Sexo:"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0" />
+                            <TextBlock Grid.Row="2"
+                                       x:Name="PatientGender"
+                                       Margin="10,0,0,0" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="3"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"
+                                       Text="Documento:"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0" />
+                            <TextBlock Grid.Row="2"
+                                       x:Name="PatientID"
+                                       Margin="10,0,0,0" />
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"
+                                       Text="Audiômetro:"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0" />
+
+                            <TextBlock Grid.Row="2"
+                                       x:Name="AudiometerTextBox"
+                                       Margin="10,0,0,0" ><Run Text="AMPLIVOX 270" /><Run Language="pt-br" Text=" (Última Aferição: 04/08/2023)" /></TextBlock> <!-- sp: (Última Aferição: 04/08/2023)"-->
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="1"
+                                BorderBrush="Black"
+                                BorderThickness="1">
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="1"
+                                       Text="Data do Exame:"
+                                       FontWeight="Bold"
+                                       Margin="10,0,0,0" />
+                            <TextBlock Grid.Row="2"
+                                       x:Name="ExamDate"
+                                       Text=""
+                                       Margin="10,0,0,0" />
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1"
+                       Text="MEATOSCOPIA (Encaminhar o Funcionário/Paciente ao Otorrinolaringologista)"
+                       FontSize="12"
+                       HorizontalAlignment="Center" />
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border BorderBrush="black"
+                            BorderThickness="1"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Background="#ffcdd2">
+                        <TextBlock Text="Orelha Direita"
+                                   Margin="10,0,40,0"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border BorderBrush="black"
+                            BorderThickness="1"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Background="#bbdefb">
+                        <TextBlock Text="Orelha Esquerda"
+                                   Margin="10,0,40,0"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border BorderBrush="black"
+                            BorderThickness="1"
+                            Grid.Row="0"
+                            Grid.Column="1">
+                        <TextBlock x:Name="ODMeatoscopy"
+                                   Text=""
+                                   Foreground="Red"
+                                   Margin="10,0,0,0"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border BorderBrush="black"
+                            BorderThickness="1"
+                            Grid.Row="1"
+                            Grid.Column="1">
+                        <TextBlock x:Name="OEMeatoscopy"
+                            Text=""
+                                   Foreground="Blue"
+                                   Margin="10,0,0,0"
+                                   FontSize="12" />
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Audiometria Tonal"
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       FontWeight="Bold" />
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <ContentControl Grid.Column="1"
+                x:Name="AudiogramD" />
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="0" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="7" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="4" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="0" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1"
+                            Text="Normal" />
+
+                <Line Grid.Row="3"
+                  Stroke="Black"
+                  StrokeThickness="1.5"
+                  X1="0" Y1="2" X2="150" Y2="2" />
+
+                <TextBlock Grid.Row="5"
+                            Text="Leve" />
+
+                <Line Grid.Row="7"
+                  Stroke="Black"
+                      StrokeThickness="1.5"
+                  X1="0" Y1="2" X2="420" Y2="2" />
+
+                <TextBlock Grid.Row="9"
+                            Text="Moderada" />
+
+                <Line Grid.Row="11"
+                  Stroke="Black"
+                      StrokeThickness="1.5"
+                  X1="0" Y1="2" X2="420" Y2="2" />
+
+                <TextBlock Grid.Row="13"
+                            Text="Severa" />
+
+                <Line Grid.Row="15"
+                  Stroke="Black"
+                      StrokeThickness="1.5"
+                  X1="0" Y1="2" X2="420" Y2="2" />
+
+                <TextBlock Grid.Row="17"
+                            Text="Profunda" />
+            </Grid>
+
+            <ContentControl Grid.Column="3"
+                x:Name="AudiogramE" />
+        </Grid>
+
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                    Text="LRF:" />
+                <TextBlock Grid.Row="1"
+                           Text="LAF:" />
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Foreground="Red"
+                           x:Name="ODLRF" />
+                <TextBlock Grid.Row="1"
+                           Foreground="Blue"
+                           x:Name="ODLAF" />
+            </Grid>
+
+            <Grid Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text="LRF:" />
+                <TextBlock Grid.Row="1"
+                           Text="LAF:" />
+            </Grid>
+
+            <Grid Grid.Column="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Text=""
+                           Foreground="Red"
+                           x:Name="OELRF" />
+                <TextBlock Grid.Row="1"
+                           Foreground="Blue"
+                           Text=""
+                           x:Name="OELAF" />
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <TextBlock Text="Indice Percentual de Reconhecimento de Fala"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="12" />
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="Intensidade"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="Monossil"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="Dissil"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="Trissil"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="#eceff1">
+                        <TextBlock Text="Pal. Faladas"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+
+                        <TextBlock Text="X"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="NWordsMono"
+                                   Text="25"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="NWordsDi"
+                                   Text="25"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="NWordsTri"
+                                   Text="25"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="#ffcdd2">
+                        <TextBlock Text="OD"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="ODIntensid"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Red" />
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="ODMono"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Red" />
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="ODDi"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Red" />
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="ODTri"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Red" />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="#bbdefb">
+                        <TextBlock Text="OE"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="OEIntensid"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Blue" />
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="OEMono"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Blue" />
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="OEDi"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Blue" />
+                    </Border>
+
+                    <Border Grid.Column="5"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="OETri"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Blue" />
+                    </Border>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.25*" />
+                    <RowDefinition Height="1.25*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <TextBlock Text="Mascaramento (dB)"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="12" />
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="VA"
+                                   HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                   FontSize="12" />
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Min"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="12" />
+                                <TextBlock Grid.Column="1"
+                                           Text="Max"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="12" />
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="VO"
+                                   HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                   FontSize="12" />
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Min"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="12" />
+                                <TextBlock Grid.Column="1"
+                                           Text="Max"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="12" />
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="LightGray">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="LOGO"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12" />
+
+                            <TextBlock Grid.Row="1"
+                                           Text="Quant"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="12" />
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="#ffcdd2">
+                        <TextBlock Text="OD"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="ODVAMIN"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Red" />
+
+                            <TextBlock Grid.Column="1"
+                                       x:Name="ODVAMAX"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Red" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="ODVOMIN"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Red" />
+
+                            <TextBlock Grid.Column="1"
+                                       x:Name="ODVOMAX"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Red" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="ODLogo"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Red" />
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Background="#bbdefb">
+                        <TextBlock Text="OE"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12" />
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="OEVAMIN"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Blue" />
+
+                            <TextBlock Grid.Column="1"
+                                       x:Name="OEVAMAX"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Blue" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="3"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="OEVOMIN"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Blue" />
+
+                            <TextBlock Grid.Column="1"
+                                       x:Name="OEVOMAX"
+                                       Text=""
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="Blue" />
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="4"
+                            BorderBrush="Black"
+                            BorderThickness="1">
+                        <TextBlock x:Name="OELogo"
+                                   Text=""
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Blue" />
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="8">
+            <TextBlock Text="Parecer Audiológico"
+                       FontSize="12"
+                       Margin="20,20,0,0" />
+        </Grid>
+
+        <Grid Grid.Row="9">
+            <Border BorderBrush="Black"
+                    BorderThickness="1"
+                    Margin="20,0,20,0">
+                <TextBlock x:Name="Observations"
+                           FontSize="12"
+                           TextWrapping="Wrap"
+                           Foreground="Black"
+                           Padding="10" />
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+
+            <Line Grid.Row="1"
+                  Stroke="Black"
+                  StrokeThickness="2"
+                  X1="5cm" Y1="30" X2="15cm" Y2="30" />
+
+            <TextBlock Grid.Row="2"
+                       x:Name="Signature"
+                       Text="Fonoaudiólogo"
+                       FontSize="12"
+                       HorizontalAlignment="Center" />
+        </Grid>
+    </Grid>
+</UserControl>

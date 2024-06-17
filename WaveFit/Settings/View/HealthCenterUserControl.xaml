@@ -1,0 +1,460 @@
+﻿<UserControl x:Class="WaveFit2.Settings.View.HealthCenterUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Settings.View"
+             xmlns:image="clr-namespace:WaveFit2.Settings.Class"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             d:DesignHeight="698"
+             Background="White">
+
+    <UserControl.Resources>
+        <image:ByteToImageConverter x:Key="ByteToImageConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <TabControl Grid.Column="1"
+                        HorizontalContentAlignment="Left"
+                        Background="LightGray"
+                        Grid.ColumnSpan="3">
+                <TabItem Header="Ativos"
+                         Width="50"
+                         Background="LightGray"
+                         x:Name="TabActivated"
+                         ToolTip="Clique aqui para visualizar os Pacientes Ativos">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto">
+                        <Grid Grid.Column="1">
+
+                            <DataGrid x:Name="CombinedDataGrid"
+                                      ItemsSource="{Binding CombinedDataList}"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectionMode="Single"
+                                      SelectionUnit="FullRow"
+                                      IsReadOnly="True"
+                                      CanUserResizeColumns="False"
+                                      CanUserResizeRows="False"
+                                      CanUserSortColumns="False"
+                                      CanUserReorderColumns="False"
+                                      VerticalContentAlignment="Center">
+                                <DataGrid.Columns>
+
+                                    <DataGridTemplateColumn Width="120">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Grid Grid.Column="0">
+                                                        <Button x:Name="DataEditButton"
+                                    Click="DataEditClick"
+                                    Width="35"
+                                    Height="35"
+                                    Background="#FFB74D"
+                                    BorderBrush="Transparent"
+                                    ToolTip="Clique aqui para editar os dados da clínica"
+
+                                    Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}">
+                                                            <md:PackIcon Kind="PencilOutline"
+                                             Foreground="#FFFCF9"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center" />
+                                                        </Button>
+                                                    </Grid>
+
+                                                    <Grid Grid.Column="1">
+                                                        <Button x:Name="DataDeleteButton"
+                                    Command="{Binding RunDialogCommand}"
+                                    Click="DataDeleteClick"
+                                    Width="35"
+                                    Height="35"
+                                    Background="#FF8A65"
+                                    BorderBrush="Transparent"
+                                    ToolTip="Clique aqui para deletar os dados da clínica"
+                                    Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}">
+                                                            <md:PackIcon Kind="DeleteForeverOutline"
+                                             Foreground="#FFFCF9"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center" />
+                                                        </Button>
+                                                    </Grid>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+
+                                    <DataGridTextColumn Header="Nome da clínica" Binding="{Binding Nickname}" Width="auto" />
+                                    <DataGridTemplateColumn Header="Logo" Width="auto">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Image Source="{Binding Logo, Converter={StaticResource ByteToImageConverter}}"
+                                   Width="60" Height="60" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="CNPJ" Binding="{Binding CNPJ}" Width="auto" />
+                                    <DataGridTextColumn Header="Telefone" Binding="{Binding Telephone}" Width="auto" />
+                                    <DataGridTextColumn Header="Código" Binding="{Binding Code}" Width="auto" />
+                                    <DataGridTextColumn Header="Modelo" Binding="{Binding Model}" Width="auto" />
+                                    <DataGridTextColumn Header="Data de Calibração" Binding="{Binding Maintenance, StringFormat={}{0:dd/MM/yyyy}}" Width="auto" />
+                                    <DataGridTextColumn Header="Estado" Binding="{Binding Acronym}" Width="auto" />
+                                    <DataGridTextColumn Header="Cidade" Binding="{Binding City}" Width="auto" />
+                                    <DataGridTextColumn Header="Bairro" Binding="{Binding Area}" Width="auto" />
+                                    <DataGridTextColumn Header="Endereço" Binding="{Binding Address}" Width="auto" />
+                                    <DataGridTextColumn Header="CEP" Binding="{Binding CEP}" Width="auto" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+
+                <TabItem Header="Excluídos"
+                         Width="50"
+                         ToolTip="Clique aqui para visualizar os Pacientes Excluídos"
+                         x:Name="TabDeleted">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto">
+                        <Grid Grid.Column="1">
+                            <DataGrid x:Name="CombinedDataGridDeleted"
+                                      ItemsSource="{Binding CombinedDataList}"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectionMode="Single"
+                                      SelectionUnit="FullRow"
+                                      IsReadOnly="True"
+                                      CanUserResizeColumns="False"
+                                      CanUserResizeRows="False"
+                                      CanUserSortColumns="False"
+                                      CanUserReorderColumns="False"
+                                      VerticalContentAlignment="Center">
+                                <DataGrid.Columns>
+
+                                    <DataGridTemplateColumn Width="180">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0">
+                                                        <Button x:Name="DataRecoverButton"
+                                                                Click="DataRecoverClick"
+                                                                BorderBrush="Transparent"
+                                                                Width="35"
+                                                                Height="35"
+                                                                Background="#ad82f2"
+                                                                ToolTip="Clique aqui para recuperar o paciente"
+                                                                Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}">
+                                                                                                <md:PackIcon Kind="BackupRestore"
+                                                                         Foreground="#FFFCF9"
+                                                                         HorizontalAlignment="Center"
+                                                                         VerticalAlignment="Center" />
+                                                        </Button>
+                                                    </Grid>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+
+                                    <DataGridTextColumn Header="Nome da clínica" Binding="{Binding Nickname}" Width="auto" />
+                                    <DataGridTemplateColumn Header="Logo" Width="auto">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Image Source="{Binding Logo, Converter={StaticResource ByteToImageConverter}}"
+                                   Width="60" Height="60" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="CNPJ" Binding="{Binding CNPJ}" Width="auto" />
+                                    <DataGridTextColumn Header="Telefone" Binding="{Binding Telephone}" Width="auto" />
+                                    <DataGridTextColumn Header="Código" Binding="{Binding Code}" Width="auto" />
+                                    <DataGridTextColumn Header="Modelo" Binding="{Binding Model}" Width="auto" />
+                                    <DataGridTextColumn Header="Data de manutenção" Binding="{Binding Maintenance, StringFormat={}{0:dd/MM/yyyy}}" Width="auto" />
+                                    <DataGridTextColumn Header="Estado" Binding="{Binding Acronym}" Width="auto" />
+                                    <DataGridTextColumn Header="Cidade" Binding="{Binding City}" Width="auto" />
+                                    <DataGridTextColumn Header="Bairro" Binding="{Binding Area}" Width="auto" />
+                                    <DataGridTextColumn Header="Endereço" Binding="{Binding Address}" Width="auto" />
+                                    <DataGridTextColumn Header="CEP" Binding="{Binding CEP}" Width="auto" />
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+            </TabControl>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <hc:SearchBar Grid.Row="0" x:Name="SearchHealthCenterTexbox"
+                          Width="200"
+                          Height="40" HorizontalAlignment="Right"
+                          Style="{StaticResource SearchBarPlus}"
+                          hc:InfoElement.Placeholder="Pesquisar"
+                          TextAlignment="Center"
+                          ToolTip="Digite Nome ou Número do Documento para pesquisar o paciente"
+                          hc:InfoElement.ShowClearButton="True" />
+            </Grid>
+
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" x:Name="AddHealthCenter"
+                        md:ButtonAssist.CornerRadius="7"
+                        Width="150"
+                        Height="40"
+                        Foreground="White"
+                        Content="Adicionar clínica"
+                        ToolTip="Clique aqui para criar uma nova clínica"
+                        Background="{StaticResource BackgroundColor}" />
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <DataGrid x:Name="DatagridHealthCenter"
+                      Grid.Column="0"
+                      CanUserAddRows="False"
+                      ItemsSource="{Binding HealthCenter}"
+                      AutoGenerateColumns="False"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      CanUserResizeRows="False"
+                      CanUserSortColumns="False"
+                      CanUserReorderColumns="False">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nome da clínica"
+                                    Binding="{Binding Nickname}"
+                                    Width="auto" />
+                        <DataGridTemplateColumn Header="Logo" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Logo, Converter={StaticResource ByteToImageConverter}}" Width="100" Height="100" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="CNPJ"
+                                    Binding="{Binding CNPJ}"
+                                    Width="auto" />
+                        <DataGridTextColumn Header="Telefone"
+                                    Binding="{Binding Telephone}"
+                                    Width="auto" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <DataGrid x:Name="DatagridAudiometer"
+                      Grid.Column="1"
+                      CanUserAddRows="False"
+                      ItemsSource="{Binding Audiometer}"
+                      AutoGenerateColumns="False"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      CanUserResizeRows="False"
+                      CanUserSortColumns="False"
+                      CanUserReorderColumns="False">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Código"
+                                    Binding="{Binding Code}"
+                                    Width="auto" />
+                        <DataGridTextColumn Header="Modelo"
+                                    Binding="{Binding Model}"
+                                    Width="auto" />
+                        <DataGridTextColumn Header="Data de manutenção"
+                                    Binding="{Binding Maintenance,
+                                              StringFormat={}{0:dd/MM/yyyy}}"
+                                    Width="auto" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <DataGrid x:Name="DatagridLocation"
+                      Grid.Column="2"
+                      CanUserAddRows="False"
+                      ItemsSource="{Binding Location}"
+                      AutoGenerateColumns="False"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      CanUserResizeRows="False"
+                      CanUserSortColumns="False"
+                      CanUserReorderColumns="False">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Estado"
+                                    Binding="{Binding Acronym}"
+                                    Width="auto" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <DataGrid x:Name="DatagridPlace"
+                      Grid.Column="3"
+                      CanUserAddRows="False"
+                      ItemsSource="{Binding Place}"
+                      AutoGenerateColumns="False"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      CanUserResizeRows="False"
+                      CanUserSortColumns="False"
+                      CanUserReorderColumns="False">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Cidade"
+                                    Binding="{Binding City}"
+                                    Width="auto" />
+                        <DataGridTextColumn Header="Bairro"
+                                    Binding="{Binding Area}"
+                                    Width="auto" />
+                        <DataGridTextColumn Header="Endereço"
+                                    Binding="{Binding Address}"
+                                    Width="auto" />
+                        <DataGridTextColumn Header="CEP"
+                                    Binding="{Binding CEP}"
+                                    Width="auto" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+            <ScrollViewer Grid.Column="1"
+                          HorizontalScrollBarVisibility="Auto"
+                          VerticalScrollBarVisibility="Auto">
+                <Grid Grid.Column="1">
+
+                    <DataGrid
+                              ItemsSource="{Binding CombinedDataList}"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              SelectionMode="Single"
+                              SelectionUnit="FullRow"
+                              IsReadOnly="True"
+                              CanUserResizeColumns="False"
+                              CanUserResizeRows="False"
+                              CanUserSortColumns="False"
+                              CanUserReorderColumns="False"
+                              VerticalContentAlignment="Center">
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Width="120">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid Grid.Column="0">
+                                                <Button x:Name="DataEditButton"
+                                                Click="DataEditClick"
+                                                Width="35"
+                                                Height="35"
+                                                Background="#FFB74D"
+                                                BorderBrush="Transparent"
+                                                ToolTip="Clique aqui para editar os dados da clínica"
+
+                                                Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}">
+                                                    <md:PackIcon Kind="PencilOutline"
+                                                         Foreground="#FFFCF9"
+                                                         HorizontalAlignment="Center"
+                                                         VerticalAlignment="Center" />
+                                                </Button>
+                                            </Grid>
+
+                                            <Grid Grid.Column="1">
+                                                <Button x:Name="DataDeleteButton"
+                                                Command="{Binding RunDialogCommand}"
+                                                Click="DataDeleteClick"
+                                                Width="35"
+                                                Height="35"
+                                                Background="#FF8A65"
+                                                BorderBrush="Transparent"
+                                                ToolTip="Clique aqui para deletar os dados da clínica"
+                                                Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}">
+                                                    <md:PackIcon Kind="DeleteForeverOutline"
+                                                         Foreground="#FFFCF9"
+                                                         HorizontalAlignment="Center"
+                                                         VerticalAlignment="Center" />
+                                                </Button>
+                                            </Grid>
+                                        </Grid>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTextColumn Header="Nome da clínica" Binding="{Binding Nickname}" Width="auto" />
+                            <DataGridTemplateColumn Header="Logo" Width="auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding Logo, Converter={StaticResource ByteToImageConverter}}"
+                                               Width="60" Height="60" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="CNPJ" Binding="{Binding CNPJ}" Width="auto" />
+                            <DataGridTextColumn Header="Telefone" Binding="{Binding Telephone}" Width="auto" />
+                            <DataGridTextColumn Header="Código" Binding="{Binding Code}" Width="auto" />
+                            <DataGridTextColumn Header="Modelo" Binding="{Binding Model}" Width="auto" />
+                            <DataGridTextColumn Header="Data de manutenção" Binding="{Binding Maintenance, StringFormat={}{0:dd/MM/yyyy}}" Width="auto" />
+                            <DataGridTextColumn Header="Estado" Binding="{Binding Acronym}" Width="auto" />
+                            <DataGridTextColumn Header="Cidade" Binding="{Binding City}" Width="auto" />
+                            <DataGridTextColumn Header="Bairro" Binding="{Binding Area}" Width="auto" />
+                            <DataGridTextColumn Header="Endereço" Binding="{Binding Address}" Width="auto" />
+                            <DataGridTextColumn Header="CEP" Binding="{Binding CEP}" Width="auto" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

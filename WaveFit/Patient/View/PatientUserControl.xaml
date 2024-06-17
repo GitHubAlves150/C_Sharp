@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="WaveFit2.Patient.View.PatientUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             mc:Ignorable="d"
+             d:DesignHeight="698"
+             d:DesignWidth="1126"
+             Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <TabControl Grid.Column="1"
+                        HorizontalContentAlignment="Left"
+                        Background="LightGray"
+                        SelectionChanged="TabControl_SelectionChanged">
+                <TabItem Header="Ativos"
+                         Width="50"
+                         Background="LightGray"
+                         x:Name="TabActivated"
+                         ToolTip="Clique aqui para visualizar os Pacientes Ativos" />
+                <TabItem Header="Excluídos"
+                         Width="50"
+                         ToolTip="Clique aqui para visualizar os Pacientes Excluídos"
+                         x:Name="TabDeleted" />
+            </TabControl>
+            <!--hc:InfoElement.ShowClearButton="True"-->
+
+            <hc:SearchBar Grid.Column="3" Width="200"
+                          x:Name="SearchPatientTexbox"
+                          TextChanged="SearchPatient"
+                          Height="40" HorizontalAlignment="Right"
+                          Style="{StaticResource SearchBarPlus}"
+                          hc:InfoElement.Placeholder="Pesquisar"
+                          TextAlignment="Center"
+                          ToolTip="Digite Nome ou Número do Documento para pesquisar o paciente"
+                          hc:InfoElement.ShowClearButton="True" />
+
+            <Button Grid.Column="5"
+                    x:Name="AddPatientButton"
+                    md:ButtonAssist.CornerRadius="7"
+                    Width="150"
+                    Height="40"
+                    Background="{StaticResource BackgroundColor}"
+                    Foreground="White"
+                    ToolTip="Clique aqui para criar um novo paciente">
+                <StackPanel Orientation="Horizontal">
+                    <md:PackIcon Kind="AccountPlus"
+                                 Foreground="White"
+                                 Height="20"
+                                 Width="20" />
+                    <TextBlock Text="Novo Paciente"
+                               Margin="5,0,0,0"
+                               VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <ContentControl Grid.Row="1"
+                        Margin="0,0,10,0"
+                        x:Name="PatientMode" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,1067 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.CalibrationUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             mc:Ignorable="d"
+             Background="White">
+    <Grid>
+        <hc:DrawerContainer>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="0" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1"
+              x:Name="AdjustRGrid"
+              Background="#fbe9e7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="15" />
+                </Grid.RowDefinitions>
+
+                <TextBlock  Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="24"
+                        Foreground="{StaticResource BackgroundColor}"
+                        Text="Orelha Direita" />
+
+                <Grid Grid.Row="1" x:Name="RButtonMenu">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="1"
+                            x:Name="RGainGraphButton"
+                            Content="Resposta"
+                            Width="120"
+                            md:ButtonAssist.CornerRadius="7"
+                            Background="#FFFCF9"
+                            Foreground="{StaticResource BackgroundColor}"
+                            Margin="5" />
+                    <Button Grid.Column="2"
+                            Visibility="Hidden"
+                            x:Name="ROutputGraphButton"
+                            Content="Entrada/Saida"
+                            Width="120"
+                            md:ButtonAssist.CornerRadius="7"
+                            Background="#FFFCF9"
+                            Foreground="{StaticResource BackgroundColor}"
+                            Margin="5" />
+                    <Button Grid.Column="3"
+                            x:Name="RAudiogramGraphButton"
+                            Content="Audiograma"
+                            Width="120"
+                            md:ButtonAssist.CornerRadius="7"
+                            Background="#FFFCF9"
+                            Foreground="{StaticResource BackgroundColor}"
+                            Margin="5" />
+                </Grid>
+
+                <ContentControl x:Name="CurrentGraphR" Visibility="Visible"
+                                Grid.Row="3"
+                                Margin="0" />
+
+                <ContentControl x:Name="AdjustMenuR"
+                                Grid.Row="5"
+                                Margin="0" />
+            </Grid>
+
+            <hc:Drawer Grid.Column="1"
+                       Name="DrawerRight"
+                       Dock="Right"
+                       ShowMask="False"
+                       MaskCanClose="False">
+                <md:Card Background="Transparent"
+                         UniformCornerRadius="15"
+                         Width="400">
+                    <ContentControl x:Name="DrawerRightContent" />
+                </md:Card>
+            </hc:Drawer>
+
+            <hc:ScrollViewer VerticalScrollBarVisibility="Auto"
+                          Grid.Column="2"
+                          Padding="5">
+
+                <Grid x:Name="OptionsGrid"
+                      Background="#FFFCF9">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox x:Name="PatientTextBox"
+                                 Grid.Column="1"
+                                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                                 md:HintAssist.Hint="Paciente"
+                                 IsEnabled="False" />
+
+                        <Button x:Name="SearchPatient"
+                                    Grid.Column="3"
+                                    Background="#FFFCF9"
+                                    Foreground="{StaticResource BackgroundColor}"
+                                    md:ButtonAssist.CornerRadius="5"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Visibility="Visible"
+                                    Margin="5">
+                            <md:PackIcon Kind="Magnify"
+                                     VerticalAlignment="Center"
+                                     HorizontalAlignment="Center" />
+                        </Button>
+                    </Grid>
+
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="5" />
+                        </Grid.ColumnDefinitions>
+
+                        <ComboBox x:Name="PatientAudiograms"
+                                      Grid.Column="1"
+                                      ItemStringFormat="{}{0:dd/MM/yyyy}"
+                                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                      md:HintAssist.Hint="Audiogramas"
+                                      Background="White"
+                                      VerticalAlignment="Top"
+                                      IsEnabled="False" />
+                    </Grid>
+
+                    <md:Card Grid.Row="5"
+                                 Margin="5"
+                                 Padding="4"
+                                 UniformCornerRadius="14">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="0" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+                                <Expander Style="{StaticResource BaseStyle}"
+                                          x:Name="ExpanderAparelho" />
+                                <TextBlock  Grid.Column="1"
+                                                Text="Aparelhos"
+                                                HorizontalAlignment="Center"
+                                            VerticalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="3" x:Name="HINameGrid" Visibility="Visible">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock  x:Name="RHI"
+                                                Grid.Column="1"
+                                                HorizontalAlignment="Center" />
+
+                                <TextBlock  x:Name="LHI"
+                                                Grid.Column="3"
+                                                HorizontalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="5" x:Name="NProgramsGrid" Visibility="Visible">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="5" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="10" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="10" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock  Text="Nº Programas:"
+                                                Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center" />
+
+                                    <TextBlock  Text="Nº Programas:"
+                                                Grid.Column="3"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center" />
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="40" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="30" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <ComboBox  x:Name="NProgramR"
+                                               Style="{StaticResource ComboBox.Small}"
+                                               Grid.Column="1"
+                                               HorizontalContentAlignment="Center" />
+
+                                    <ComboBox  x:Name="NProgramL"
+                                               Style="{StaticResource ComboBox.Small}"
+                                               Grid.Column="3"
+                                               HorizontalContentAlignment="Center" />
+                                </Grid>
+                            </Grid>
+
+                            <Grid Grid.Row="7" x:Name="ReceptorGrid" Visibility="Visible">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="5" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="10" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="10" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock  Text="Receptor:"
+                                                Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center" />
+
+                                    <TextBlock  Text="Receptor:"
+                                                Grid.Column="3"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center" />
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="40" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="30" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <ComboBox  x:Name="ReceptorR"
+                                               Style="{StaticResource ComboBox.Small}"
+                                               Grid.Column="1"
+                                               HorizontalContentAlignment="Center" />
+
+                                    <ComboBox  x:Name="ReceptorL"
+                                               Style="{StaticResource ComboBox.Small}"
+                                               Grid.Column="3"
+                                               HorizontalContentAlignment="Center" />
+                                </Grid>
+                            </Grid>
+
+                            <Grid Grid.Row="9" x:Name="ButtonsGrid" Visibility="Visible">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="0" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="0" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="0" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="0" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button x:Name="DetectButtonR" Grid.Column="1"
+                                              Margin="5"
+                                              Foreground="{StaticResource BackgroundColor}"
+                                              Content="{md:PackIcon Kind=Magnify}"
+                                              Style="{StaticResource MaterialDesignIconButton}"
+                                              Background="#fbe9e7"
+                                              Height="35"
+                                              Width="35"
+                                              ToolTip="Reconectar programadora">
+                                </Button>
+
+                                <ToggleButton x:Name="MuteButtonR" Grid.Column="3"
+                                              Margin="5"
+                                              md:ToggleButtonAssist.OnContent="{md:PackIcon Kind=MicOff}"
+                                              Foreground="{StaticResource BackgroundColor}"
+                                              Content="{md:PackIcon Kind=Microphone}"
+                                              Style="{StaticResource MaterialDesignActionToggleButton}"
+                                              Background="#fbe9e7"
+                                              Height="35"
+                                              Width="35"
+                                              ToolTip="Mutar/Desmutar">
+                                </ToggleButton>
+
+                                <ToggleButton x:Name="MuteButtonL" Grid.Column="7"
+                                              Margin="5"
+                                              md:ToggleButtonAssist.OnContent="{md:PackIcon Kind=MicOff}"
+                                              Foreground="{StaticResource BackgroundColor}"
+                                              Content="{md:PackIcon Kind=Microphone}"
+                                              Style="{StaticResource MaterialDesignActionToggleButton}"
+                                              Background="#e8eaf6"
+                                              Height="35"
+                                              Width="35"
+                                              ToolTip="Mutar/Desmutar">
+                                </ToggleButton>
+
+                                <Button x:Name="DetectButtonL" Grid.Column="9"
+                                              Margin="5"
+                                              Foreground="{StaticResource BackgroundColor}"
+                                              Content="{md:PackIcon Kind=Magnify}"
+                                              Style="{StaticResource MaterialDesignIconButton}"
+                                              Background="#e8eaf6"
+                                              Height="35"
+                                              Width="35"
+                                              ToolTip="Reconectar programadora">
+                                </Button>
+                            </Grid>
+
+                            <Grid Grid.Row="11" Visibility="Collapsed">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="10" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button x:Name="SerialNumberR"
+                                        Grid.Column="1"
+                                        Margin="5"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Content="{md:PackIcon Kind=ShieldKeyOutline}"
+                                        Style="{StaticResource MaterialDesignIconButton}"
+                                        Background="#fbe9e7"
+                                        Height="35"
+                                        Width="35"
+                                       ToolTip="Reconectar programadora">
+                                </Button>
+
+                                <Button x:Name="SerialNumberL"
+                                        Grid.Column="3"
+                                        Margin="5"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Content="{md:PackIcon Kind=ShieldKeyOutline}"
+                                        Style="{StaticResource MaterialDesignIconButton}"
+                                        Background="#e8eaf6"
+                                        Height="35"
+                                        Width="35"
+                                        ToolTip="Reconectar programadora">
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="7"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14">
+
+                        <Grid Grid.Row="7">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+
+                                <Expander Style="{StaticResource BaseStyle}"
+                                          x:Name="ExpanderAutofit" />
+                                <TextBlock Text="Auto-Ajuste"
+                                           Grid.Column="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="1" x:Name="AdaptGrid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="5" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="5" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Nível de Adaptação:"
+                                           Grid.Row="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+
+                                <ComboBox  x:Name="AdaptLevel"
+                                           Style="{StaticResource ComboBox.Small}"
+                                           Grid.Row="3"
+                                           HorizontalContentAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="2" x:Name="WindGrid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="5" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="5" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="10" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Ventilação"
+                                           Grid.Row="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+
+                                <ComboBox  x:Name="WindLevel"
+                                           Style="{StaticResource ComboBox.Small}"
+                                           Grid.Row="3"
+                                           HorizontalContentAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="3" x:Name="AutofitGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="1"
+                                        x:Name="AutofitR"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#fbe9e7"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Autofit">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="AutoFix"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+                                <Button Grid.Column="3"
+                                        x:Name="AutofitL"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#e8eaf6"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Autofit">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="AutoFix"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="9"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14">
+
+                        <Grid Grid.Row="9">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="5" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="10" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+
+                                <Expander Style="{StaticResource BaseStyle}"
+                                          x:Name="ExpanderProgram" />
+                                <TextBlock Text="Programa"
+                                           Grid.Column="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+                            </Grid>
+
+                                <Grid Grid.Row="2"  x:Name="CurrentProgramGrid" Visibility="Visible">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="5" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock  Text="Programa atual:"
+                                                    Grid.Column="1"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center" />
+
+                                        <TextBlock  Text="Programa atual:"
+                                                    Grid.Column="3"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center" />
+                                    </Grid>
+
+                                    <Grid Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <ComboBox  x:Name="ProgramR"
+                                                           SelectedIndex="0"
+                                                           Style="{StaticResource ComboBox.Small}"
+                                                           Grid.Column="1"
+                                                           HorizontalContentAlignment="Center" />
+
+                                        <ComboBox  x:Name="ProgramL"
+                                                           SelectedIndex="0"
+                                                           Style="{StaticResource ComboBox.Small}"
+                                                           Grid.Column="3"
+                                                           HorizontalContentAlignment="Center" />
+                                    </Grid>
+                                </Grid>
+
+                                <Grid Grid.Row="4" x:Name="CopyGrid" Visibility="Visible">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="5" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="5" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="5" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock  Text="Copiar de:"
+                                                    Grid.Column="1"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center" />
+
+                                        <TextBlock  Text="Copiar de:"
+                                                    Grid.Column="3"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center" />
+                                    </Grid>
+
+                                    <Grid Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="40" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="30" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <ComboBox  x:Name="ProgramCR"
+                                                   SelectedIndex="0"
+                                                   Style="{StaticResource ComboBox.Small}"
+                                                   Grid.Column="1"
+                                                   HorizontalContentAlignment="Center" />
+
+                                        <ComboBox  x:Name="ProgramCL"
+                                                   SelectedIndex="0"
+                                                   Style="{StaticResource ComboBox.Small}"
+                                                   Grid.Column="3"
+                                                   HorizontalContentAlignment="Center" />
+                                    </Grid>
+
+                                    <Grid Grid.Row="4">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="10" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock  Text="Copiar para:"
+                                                    Grid.Column="1"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center" />
+
+                                        <TextBlock  Text="Copiar para:"
+                                                    Grid.Column="3"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center" />
+                                    </Grid>
+
+                                    <Grid Grid.Row="6">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="40" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="30" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <ComboBox  x:Name="CopyProgramR"
+                                                   Style="{StaticResource ComboBox.Small}"
+                                                   Grid.Column="1"
+                                                   HorizontalContentAlignment="Center" />
+
+                                        <ComboBox  x:Name="CopyProgramL"
+                                                   Style="{StaticResource ComboBox.Small}"
+                                                   Grid.Column="3"
+                                                   HorizontalContentAlignment="Center" />
+                                    </Grid>
+
+                                    <Grid Grid.Row="2" Grid.RowSpan="5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="40" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Grid.Column="0"
+                                                    x:Name="CopyPR"
+                                                    md:ButtonAssist.CornerRadius="7"
+                                                    Background="#fbe9e7"
+                                                    Foreground="{StaticResource BackgroundColor}"
+                                                    Width="25"
+                                                    Height="65"
+                                                    Padding="0"
+                                                    ToolTip="Copiar parâmetros de/para.">
+                                            <StackPanel Orientation="Horizontal">
+                                                <md:PackIcon Kind="ArrowURightBottom"
+                                                         Width="15"
+                                                         Height="15" />
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Grid.Column="4"
+                                                    x:Name="CopyPL"
+                                                    md:ButtonAssist.CornerRadius="7"
+                                                    Background="#e8eaf6"
+                                                    Foreground="{StaticResource BackgroundColor}"
+                                                    Width="25"
+                                                    Height="65"
+                                                    Padding="0"
+                                                    ToolTip="Copiar parâmetros de/para.">
+                                            <StackPanel Orientation="Horizontal">
+                                                <md:PackIcon Kind="ArrowULeftBottom"
+                                                         Width="15"
+                                                         Height="15"
+                                                         HorizontalAlignment="Center"
+                                                         VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </Button>
+                                    </Grid>
+                            </Grid>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="11"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14">
+
+                        <Grid Grid.Row="9">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="Memória"
+                                           Grid.Column="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+
+                                <Expander Style="{StaticResource BaseStyle}"
+                                          x:Name="ExpanderMemory">
+                                </Expander>
+                            </Grid>
+
+                            <Grid Grid.Row="1" x:Name="GetGrid" Visibility="Visible">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="1"
+                                        x:Name="GetR"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#fbe9e7"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Leitura da memória de fábrica">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="Sync"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+
+                                <Button Grid.Column="3"
+                                        x:Name="GetL"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#e8eaf6"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Leitura da memória de fábrica">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="Sync"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+
+                            <Grid Grid.Row="2" x:Name="ReadGrid" Visibility="Visible">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="1"
+                                        x:Name="ReadR"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#fbe9e7"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Leitura da memória atual do aparelho">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="Memory"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+
+                                <Button Grid.Column="3"
+                                        x:Name="ReadL"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#e8eaf6"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Leitura da memória atual do aparelho">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="Memory"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="13"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+
+                                <Expander Style="{StaticResource BaseStyle}"
+                                          x:Name="ExpanderBurn" />
+                                <TextBlock Text="Gravar"
+                                           Grid.Column="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="1" x:Name="BurnGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="1"
+                                        x:Name="BurnR"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#fbe9e7"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Gravar na memória permanente.">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="ContentSaveAll"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+
+                                <Button Grid.Column="3"
+                                        x:Name="BurnL"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#e8eaf6"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Gravar na memória permanente.">
+                                    <StackPanel Orientation="Horizontal">
+                                        <md:PackIcon Kind="ContentSaveAll"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </md:Card>
+
+                    <md:Card Grid.Row="15"
+                             Margin="5"
+                             Padding="4"
+                             UniformCornerRadius="14">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="25" />
+                                </Grid.ColumnDefinitions>
+
+                                <Expander Style="{StaticResource BaseStyle}"
+                                          x:Name="ExpanderHelp" />
+                                <TextBlock Text="Fitting Assistance"
+                                           Grid.Column="1"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center" />
+                            </Grid>
+
+                            <Grid Grid.Row="1" x:Name="HelpGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="1"
+                                        x:Name="HelpR"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#fbe9e7"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Gravar na memória permanente.">
+                                    <StackPanel Orientation="Horizontal">
+                                            <md:PackIcon Kind="TooltipHelpOutline"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+
+                                <Button Grid.Column="3"
+                                        x:Name="HelpL"
+                                        md:ButtonAssist.CornerRadius="7"
+                                        Background="#e8eaf6"
+                                        Foreground="{StaticResource BackgroundColor}"
+                                        Margin="5"
+                                        ToolTip="Gravar na memória permanente.">
+                                    <StackPanel Orientation="Horizontal">
+                                            <md:PackIcon Kind="TooltipHelpOutline"
+                                                     Width="25"
+                                                     Height="25" />
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </md:Card>
+                </Grid>
+            </hc:ScrollViewer>
+
+            <Grid Grid.Column="3"
+              x:Name="AdjustLGrid"
+              Background="#e8eaf6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="15" />
+                </Grid.RowDefinitions>
+
+                <TextBlock  Grid.Row="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="24"
+                            Text="Orelha Esquerda"
+                            Foreground="{StaticResource BackgroundColor}" />
+
+                <Grid Grid.Row="1" x:Name="LButtonMenu">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="1"
+                            x:Name="LGainGraphButton"
+                            Content="Resposta"
+                            Width="120"
+                            md:ButtonAssist.CornerRadius="7"
+                            Background="#FFFCF9"
+                            Foreground="{StaticResource BackgroundColor}"
+                            Margin="5" />
+                    <Button Grid.Column="2"
+                            x:Name="LOutputGraphButton"
+                            Content="Entrada/Saida"
+                            Visibility="Hidden"
+                            Width="120"
+                            md:ButtonAssist.CornerRadius="7"
+                            Background="#FFFCF9"
+                            Foreground="{StaticResource BackgroundColor}"
+                            Margin="5" />
+                    <Button Grid.Column="3"
+                            x:Name="LAudiogramGraphButton"
+                            Content="Audiograma"
+                            Width="120"
+                            md:ButtonAssist.CornerRadius="7"
+                            Background="#FFFCF9"
+                            Foreground="{StaticResource BackgroundColor}"
+                            Margin="5" />
+                </Grid>
+
+                <ContentControl x:Name="CurrentGraphL"
+                                Grid.Row="3"
+                                Margin="0" />
+
+                <ContentControl x:Name="AdjustMenuL"
+                                Grid.Row="5"
+                                Margin="0" />
+            </Grid>
+
+                <hc:Drawer Grid.Column="3"
+                       Name="DrawerLeft"
+                       Dock="Left"
+                       ShowMask="False"
+                       MaskCanClose="False">
+                    <md:Card Background="Transparent"
+                         UniformCornerRadius="15"
+                         Width="400">
+                        <ContentControl x:Name="DrawerLeftContent" />
+                    </md:Card>
+                </hc:Drawer>
+            </Grid>
+        </hc:DrawerContainer>
+    </Grid>
+</UserControl>

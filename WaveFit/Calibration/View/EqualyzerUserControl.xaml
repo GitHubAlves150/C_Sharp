@@ -1,0 +1,868 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.EqualyzerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+    <Grid>
+        <Grid x:Name="GridLegacy" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" x:Name="ViewDC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="125 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    Maximum="0"
+                    Minimum="-40"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="SliderDC"
+                    Foreground="{StaticResource BackgroundColor}" />
+
+                <TextBlock Margin="5" x:Name="ValueDC"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="1" x:Name="View500Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    Maximum="0"
+                    Minimum="-40"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="2" x:Name="View1000Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="1000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider1000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value1000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="3" x:Name="View1500Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="1500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider1500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value1500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="4" x:Name="View2000Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="2000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider2000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value2000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="5" x:Name="View2500Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="2500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider2500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value2500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="6" x:Name="View3000Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="3000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider3000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value3000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="7" x:Name="View3500Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="3500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider3500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value3500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="8" x:Name="View4250Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="4250 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider4250Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value4250Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="9" x:Name="View5250Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="5250 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider5250Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value5250Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="10" x:Name="View6250Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="6250 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider6250Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value6250Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="11" x:Name="View7250Hz">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="7250 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="Slider7250Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="Value7250Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="GridGeneric" Visibility="Visible">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="125 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    Maximum="0"
+                    Minimum="-40"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider0"
+                    Foreground="{StaticResource BackgroundColor}" />
+
+                <TextBlock Margin="5" x:Name="A16Value0"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    Maximum="0"
+                    Minimum="-40"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="1000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider1000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value1000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="1500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider1500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value1500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="2000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider2000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value2000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="2500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider2500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value2500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="3000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider3000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value3000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="3500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider3500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value3500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="4000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider4000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value4000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="9">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="4500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider4500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value4500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="5000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider5000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value5000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="11">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="5500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider5500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value5500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="12">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="6000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider6000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value6000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="13">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="6500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider6500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value6500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Column="14">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="7000 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider7000Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value7000Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Column="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="9*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Margin="5" Text="7500 Hz"
+                       Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+                <Slider  Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="BottomRight"
+                    Style="{StaticResource SliderBaseStyle}"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Value="0"
+                    Grid.Row="1"
+                    Margin="5"
+                    x:Name="A16Slider7500Hz"
+                    Foreground="{StaticResource BackgroundColor}" />
+                <TextBlock Margin="5" x:Name="A16Value7500Hz"
+                       Grid.Row="2"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

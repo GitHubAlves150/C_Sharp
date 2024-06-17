@@ -1,0 +1,596 @@
+﻿<UserControl x:Class="WaveFit2.Audiogram.View.AudiogramUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Audiogram.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1"
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    md:ButtonAssist.CornerRadius="7"
+                    x:Name="FindPatientButton"
+                    Width="195"
+                    Height="40"
+                    ToolTip="Clique aqui para Selecionar Paciente"
+                    Background="{StaticResource BackgroundColor}"
+                        Foreground="White">
+                <StackPanel Orientation="Horizontal">
+                    <md:PackIcon Kind="Magnify"
+                                     Foreground="White"
+                                     Height="20"
+                                     Width="20"
+                                     Margin="5" />
+                    <TextBlock Text="Selecionar paciente"
+                                   Margin="5"
+                                   VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+
+            <TextBlock  Grid.Column="3"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Text="Paciente:" />
+
+            <TextBox x:Name="SelectedPatient"
+                     Grid.Column="4"
+                     Height="50"
+                     md:HintAssist.Hint="Paciente"
+                     IsEnabled="False"
+                     Margin="5"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+
+            <TextBlock  Grid.Column="5"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Text="Clínica:" />
+
+            <ComboBox x:Name="HealthCenterBox"
+                      Visibility="Visible"
+                      Grid.Column="6"
+                      Height="50"
+                      md:HintAssist.Hint="Clinica selecionada"
+                      Margin="5"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}" />
+
+            <TextBlock  Grid.Column="7"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Text="Audiometro:"
+                        Visibility="Visible" />
+
+            <ComboBox x:Name="AudiometerBox"
+                      Visibility="Visible"
+                      Grid.Column="8"
+                      Height="50"
+                      md:HintAssist.Hint="Audiometro selecionado"
+                      Margin="5"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}" />
+        </Grid>
+
+        <Border Grid.Row="1"
+                BorderBrush="Black"
+                BorderThickness="0"
+                CornerRadius="20"
+                Background="White"
+                x:Name="StepBorder">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="0" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BackButton"
+                    Grid.Column="1"
+                    Background="{StaticResource BackgroundColor}"
+                    Margin="5"
+                    Width="110"
+                    ToolTip="Clique aqui para Voltar">
+                    <StackPanel Orientation="Horizontal">
+                        <md:PackIcon Kind="ArrowLeftBold"
+                             Foreground="#FFFCF9" />
+                        <TextBlock Text="Voltar"
+                               Margin="5,0,0,0"
+                               Foreground="#FFFCF9" />
+                    </StackPanel>
+                </Button>
+
+                <hc:StepBar x:Name="CurrentStep" StepIndex="0" Margin="10"
+                            Grid.Column="3" Cursor="Hand">
+                    <hc:StepBarItem Content="Selecionar Paciente" />
+                    <hc:StepBarItem Content="Meatoscopia" />
+                    <hc:StepBarItem Content="Audiometria Tonal" />
+                    <hc:StepBarItem Content="Logoaudiometria" />
+                    <hc:StepBarItem Content="Mascaramento" />
+                    <hc:StepBarItem Content="Parecer Audiológico" />
+                    <hc:StepBarItem Content="Salvar" />
+                    <hc:StepBarItem Content="Imprimir" />
+                </hc:StepBar>
+
+                <Button x:Name="NextButton"
+                        Grid.Column="5"
+                        Background="{StaticResource BackgroundColor}"
+                        Margin="5"
+                        Width="120"
+                        ToolTip="Clique aqui para Avançar">
+                    <StackPanel Orientation="Horizontal">
+                        <md:PackIcon Kind="ArrowRightBold"
+                                     Foreground="#FFFCF9"
+                                     VerticalAlignment="Center" />
+                        <TextBlock Text="Continuar"
+                                   Margin="5,0,0,0"
+                                   Foreground="#FFFCF9"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="SaveButton"
+                        Grid.Column="5"
+                        Background="{StaticResource BackgroundColor}"
+                        Margin="5"
+                        Width="120"
+                        Visibility="Hidden">
+                    <StackPanel Orientation="Horizontal">
+                        <md:PackIcon Kind="ContentSave"
+                                     Foreground="#FFFCF9"
+                                     VerticalAlignment="Center" />
+                        <TextBlock Text="Salvar"
+                                   Margin="5,0,0,0"
+                                   Foreground="#FFFCF9"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="PrintButton"
+                        Grid.Column="5"
+                        Background="{StaticResource BackgroundColor}"
+                        Margin="5"
+                        Width="120"
+                        Visibility="Hidden">
+                    <StackPanel Orientation="Horizontal">
+                        <md:PackIcon Kind="Printer"
+                                     Foreground="#FFFCF9"
+                                     VerticalAlignment="Center" />
+                        <TextBlock Text="Imprimir"
+                                   Margin="5,0,0,0"
+                                   Foreground="#FFFCF9"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+
+        <ContentControl Grid.Row="2" x:Name="CurrentContent" />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0" />
+                <ColumnDefinition Width="21cm" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ContentControl x:Name="PrintContent"
+                            Grid.Column="1" />
+        </Grid>
+
+        <Grid Grid.Row="2" Background="White" x:Name="AudiographGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+
+            <ContentControl x:Name="RightAudiograph" />
+
+            <Grid Grid.Column="1" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Sem Resposta"
+                           HorizontalAlignment="Center"
+                           Margin="5"
+                           Grid.Row="0" />
+
+                    <Grid Grid.Row="1">
+                        <ToggleButton x:Name="NoAnswerButton"
+                                      Content="{md:PackIcon Kind=EarHearingOff}"
+                                      Width="60"
+                                      Grid.Row="1"
+                                      Background="#FFFCF9"
+                                      BorderBrush="{StaticResource BackgroundColor}"
+                                      BorderThickness="1"
+                                      IsChecked="False"
+                                       ToolTip="Clique aqui para Ativar/Desativar Sem Resposta" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Mascaramento"
+                           HorizontalAlignment="Center"
+                           Margin="5"
+                           Grid.Row="0" />
+
+                    <Grid Grid.Row="1">
+                        <ToggleButton x:Name="MaskButton"
+                                      Content="{md:PackIcon Kind=DramaMasks}"
+                                      Width="60"
+                                      Grid.Row="1"
+                                      Background="#FFFCF9"
+                                      BorderBrush="{StaticResource BackgroundColor}"
+                                      BorderThickness="1"
+                                      IsChecked="False"
+                                      ToolTip="Clique aqui para Ativar/Desativar Mascaramento" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="5" Name="VAGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="VA"
+                           HorizontalAlignment="Center"
+                           Margin="5"
+                           Grid.Row="0" />
+
+                    <Grid Grid.Row="1">
+                        <Button x:Name="VA"
+                                Background="#FFFCF9"
+                                Grid.Column="1"
+                                Cursor="Hand"
+                                ToolTip="Clique aqui para Selecionar VA">
+                            <Grid>
+                                <Grid x:Name="VAIcons"
+                                      Visibility="Visible">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon VerticalAlignment="Center"
+                                                 Kind="CircleOutline"
+                                                 Grid.Row="0"
+                                                 Foreground="Red" />
+                                    </Grid>
+
+                                    <Grid Grid.Column="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon Kind="Close"
+                                                     VerticalAlignment="Center"
+                                                     Grid.Row="0"
+                                                     Foreground="Blue" />
+                                    </Grid>
+                                </Grid>
+
+                                <Grid x:Name="VAMaskIcons"
+                                      Visibility="Hidden">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon VerticalAlignment="Center"
+                                                 Kind="TriangleOutline"
+                                                 Grid.Row="0"
+                                                 Foreground="Red" />
+                                    </Grid>
+
+                                    <Grid Grid.Column="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon Kind="SquareOutline"
+                                                     VerticalAlignment="Center"
+                                                     Grid.Row="0"
+                                                     Foreground="Blue" />
+                                    </Grid>
+                                </Grid>
+
+                                <Grid x:Name="VANoAnswerIcons"
+                                      Visibility="Hidden">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0"
+                                          x:Name="RVANoAnswerIcon">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon
+                                                 Kind="CircleOutline"
+                                                 Grid.Row="0"
+                                                 Foreground="Red" />
+                                        <md:PackIcon Kind="ArrowDownThin"
+                                                     Margin="0,10,0,0"
+                                                     Foreground="Red" />
+                                    </Grid>
+
+                                    <Grid Grid.Column="2"
+                                          x:Name="LVANoAnswerIcon">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon Kind="Close"
+                                                     Grid.Row="0"
+                                                     Margin="0,0,0,0"
+                                                     Foreground="Blue" />
+                                        <md:PackIcon Kind="One"
+                                                     Margin="0,5,0,0"
+                                                     Foreground="Blue" />
+                                        <md:PackIcon Kind="ArrowDownThin"
+                                                     Margin="0,10,0,0"
+                                                     Foreground="Blue" />
+                                    </Grid>
+                                </Grid>
+
+                                <Grid x:Name="VAMaskNoAnswerIcons"
+                                      Visibility="Hidden">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="5" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon
+                                                 Kind="TriangleOutline"
+                                                 Grid.Row="0"
+                                                 Foreground="Red" />
+                                        <md:PackIcon Kind="ArrowDownThin"
+                                                     Margin="0,10,0,0"
+                                                     Foreground="Red" />
+                                    </Grid>
+
+                                    <Grid Grid.Column="2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <md:PackIcon Kind="SquareOutline"
+                                                     Grid.Row="0"
+                                                     Foreground="Blue" />
+
+                                        <md:PackIcon Kind="ArrowDownThin"
+                                                     Margin="0,10,0,0"
+                                                     Foreground="Blue" />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="7" Name="VOGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="VO" HorizontalAlignment="Center"
+                           Margin="5" Grid.Row="0" />
+
+                    <Grid Grid.Row="2">
+
+                        <Button x:Name="VO"
+                                Background="#FFFCF9"
+                                Grid.Column="1"
+                                ToolTip="Clique aqui para Selecionar VO">
+                            <Grid>
+                                <Grid x:Name="VOImage"
+                                      Visibility="Hidden">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image x:Name="RVOimage"
+                                           Grid.Column="0"
+                                           Source="/Resources/AudiometrySymbols/RVO.png"
+                                           Margin="2.5"
+                                           Width="20"
+                                           Height="20" />
+                                    <Image x:Name="LVOimage"
+                                           Grid.Column="1"
+                                           Source="/Resources/AudiometrySymbols/LVO.png"
+                                           Margin="2.5"
+                                           Width="20"
+                                           Height="20" />
+                                </Grid>
+
+                                <Grid x:Name="VOIcon">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <md:PackIcon x:Name="RVOicon"
+                                                 Kind="LessThan"
+                                                 Grid.Column="0"
+                                                 Margin="2.5"
+                                                 Width="20"
+                                                 Height="20"
+                                                 Foreground="Red" />
+                                    <md:PackIcon x:Name="LVOicon"
+                                                 Kind="GreaterThan"
+                                                 Grid.Column="1"
+                                                 Margin="2.5"
+                                                 Width="20"
+                                                 Height="20"
+                                                 Foreground="Blue" />
+                                </Grid>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="9" Name="UCLGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="UCL" HorizontalAlignment="Center"
+                           Margin="5" Grid.Row="0" />
+                    <Button x:Name="UCL"
+                        Background="#FFFCF9" Grid.Row="1"
+                        ToolTip="Clique aqui para Selecionar UCL">
+                        <StackPanel Orientation="Horizontal">
+                            <md:PackIcon Kind="AlphaM"
+                                         Grid.Column="0"
+                                         Width="18"
+                                         Height="18"
+                                         Foreground="Red" />
+                            <md:PackIcon Kind="AlphaM"
+                                         Grid.Column="1"
+                                         Width="18"
+                                         Height="18"
+                                         Foreground="Blue" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="11" Name="Copy">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Copiar" HorizontalAlignment="Center"
+                           Margin="5" Grid.Row="0" />
+
+                    <Button x:Name="CopyRtoL"
+                        Background="#FFFCF9" Grid.Row="1"
+                        ToolTip="Clique aqui para Copiar da esquerda para direita">
+                        <StackPanel Orientation="Horizontal">
+                            <md:PackIcon Kind="Copyright" Grid.Column="0"
+                                         Width="18" Height="18"
+                                         Foreground="Red" />
+                            <md:PackIcon Kind="ArrowRightBold" Grid.Column="1"
+                                         Width="18" Height="18"
+                                         Foreground="Blue" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="CopyLtoR"
+                            Background="#FFFCF9" Grid.Row="3"
+                            ToolTip="Clique aqui para Copiar da direita para esquerda">
+                        <StackPanel Orientation="Horizontal">
+                            <md:PackIcon Kind="ArrowLeftBold" Grid.Column="0"
+                                         Width="18" Height="18"
+                                         Foreground="Red" />
+                            <md:PackIcon Kind="Copyleft" Grid.Column="1"
+                                         Width="18" Height="18"
+                                         Foreground="Blue" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="13" Name="Delete">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Deletar" HorizontalAlignment="Center"
+                           Margin="5" Grid.Row="0" />
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="DeleteR"
+                            Background="#FFFCF9" Grid.Column="0"
+                            ToolTip="Clique aqui para Deletar os pontos esquerdos">
+                            <md:PackIcon Kind="DeleteForeverOutline"
+                                         Width="18" Height="18"
+                                         Foreground="Red" />
+                        </Button>
+
+                        <Button x:Name="DeleteL"
+                                Background="#FFFCF9" Grid.Column="1"
+                                ToolTip="Clique aqui para Deletar os pontos direitos">
+                            <md:PackIcon Kind="DeleteForeverOutline"
+                                         Width="18" Height="18"
+                                         Foreground="Blue" />
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <ContentControl x:Name="LeftAudiograph" Grid.Column="2" />
+        </Grid>
+    </Grid>
+</UserControl>

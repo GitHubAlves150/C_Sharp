@@ -1,0 +1,445 @@
+﻿<Window x:Class="WaveFit2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        Height="768"
+        Width="1366"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="White"
+        Title="Home"
+        WindowStyle="None">
+
+    <Window.Resources>
+        <Style TargetType="ToolTip"
+               x:Key="tt_style">
+            <Setter Property="Placement"
+                    Value="Absolute" />
+            <Setter Property="Height"
+                    Value="40" />
+            <Setter Property="Width"
+                    Value="120" />
+            <Setter Property="Background"
+                    Value="Red" />
+            <Setter Property="BorderBrush"
+                    Value="Transparent" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="FontFamily"
+                    Value="Fonts/Roboto-Light.ttf #Roboto" />
+            <Setter Property="FontSize"
+                    Value="16" />
+            <Setter Property="HasDropShadow"
+                    Value="True" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Center" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Center" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--SideBar-->
+        <Grid   x:Name="SideBar"
+                HorizontalAlignment="Left"
+                Background="#2E333A">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="0.05*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+            <!--Grid for the Menu Toggle Button-->
+            <Border Grid.RowSpan="7">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,0"
+                                         EndPoint="0.5,1">
+                        <GradientStop Color="#014F56"
+                                      Offset="0" />
+                        <GradientStop Color="#014F56"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+
+                <!--Toggle Button-->
+
+                <ToggleButton x:Name="MenuButton"
+                              Grid.Column="0"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Margin="10"
+                              Height="30"
+                              Width="30"
+                              Foreground="White"
+                              ToolTip="E"
+                              IsChecked="True"
+                              Style="{StaticResource MaterialDesignHamburgerToggleButton}">
+
+                    <!--// Toggle Button - Checked, Unchecked events //-->
+
+                    <ToggleButton.Triggers>
+
+                        <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+
+                            <BeginStoryboard>
+
+                                <Storyboard x:Name="HideStackPanel">
+
+                                    <DoubleAnimation Storyboard.TargetName="SideBar"
+                                                     Storyboard.TargetProperty="Width"
+                                                     BeginTime="0:0:0"
+                                                     From="230"
+                                                     To="80"
+                                                     Duration="0:0:0.2">
+                                    </DoubleAnimation>
+
+                                    <DoubleAnimation Storyboard.TargetName="profile"
+                                                     Storyboard.TargetProperty="Width"
+                                                     BeginTime="0:0:0"
+                                                     From="120"
+                                                     To="60"
+                                                     Duration="0:0:0.2">
+                                    </DoubleAnimation>
+
+                                    <DoubleAnimation Storyboard.TargetName="profile"
+                                                     Storyboard.TargetProperty="Height"
+                                                     BeginTime="0:0:0"
+                                                     From="120"
+                                                     To="60"
+                                                     Duration="0:0:0.2">
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="ToggleButton.Checked">
+
+                            <BeginStoryboard>
+
+                                <Storyboard x:Name="ShowStackPanel">
+
+                                    <DoubleAnimation Storyboard.TargetName="SideBar"
+                                                     Storyboard.TargetProperty="Width"
+                                                     BeginTime="0:0:0"
+                                                     From="80"
+                                                     To="230"
+                                                     Duration="0:0:0.3">
+                                    </DoubleAnimation>
+
+                                    <DoubleAnimation Storyboard.TargetName="profile"
+                                                     Storyboard.TargetProperty="Width"
+                                                     BeginTime="0:0:0"
+                                                     From="60"
+                                                     To="120"
+                                                     Duration="0:0:0.3">
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetName="profile"
+                                                     Storyboard.TargetProperty="Height"
+                                                     BeginTime="0:0:0"
+                                                     From="60"
+                                                     To="120"
+                                                     Duration="0:0:0.3">
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ToggleButton.Triggers>
+                </ToggleButton>
+
+                <!--Menu title text-->
+
+                <TextBlock  Grid.Row="0"
+                            Grid.Column="1"
+                            Text="WaveFit 2.3.2"
+                            Foreground="White"
+                            FontSize="26"
+                            Background="Transparent"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Style="{StaticResource MaterialDesignBody1TextBlock}">
+
+                            <!--// Shadow Effect //-->
+
+                    <TextBlock.Effect>
+
+                        <DropShadowEffect  BlurRadius="10"
+                                           ShadowDepth="1"
+                                           Direction="-90"
+                                           Color="White" />
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+
+            <!--Grid for the Menu Toggle Button-->
+            <Grid Grid.Row="3">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="0.2*" />
+                </Grid.RowDefinitions>
+
+                <!--Photo-->
+                <Border Grid.Row="0"
+                        x:Name="profile"
+                        Width="130"
+                        Height="130"
+                        Padding="3"
+                        Background="#09636B"
+                        CornerRadius="100"
+                        HorizontalAlignment="Center">
+                    <Ellipse>
+                        <Ellipse.Fill>
+                            <ImageBrush x:Name="profilePic" />
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Border>
+                <!--Name-->
+                <TextBlock Grid.Row="1"
+                           x:Name="NameUser"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center" />
+            </Grid>
+
+            <!--ListView with menu list items-->
+            <Grid Grid.Row="5">
+                <hc:TransitioningContentControl>
+                    <hc:SideMenu Background="Transparent"
+                                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                        <hc:SideMenuItem Header="Início"
+                                         x:Name="HomeItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Início">
+                            <hc:SideMenuItem.Icon>
+                                <md:PackIcon x:Name="HomeIcon"
+                                             Kind="Home"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem Header="Paciente"
+                                         x:Name="PatientItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Paciente">
+                            <hc:SideMenuItem.Icon>
+                                <md:PackIcon x:Name="PatientIcon"
+                                             Kind="CardAccountDetails"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem Header="Histórico"
+                                         x:Name="RecordsItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Histórico">
+                            <hc:SideMenuItem.Icon>
+
+                                <md:PackIcon x:Name="RecordsIcon"
+                                             Kind="ClipboardText"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem Header="Avaliações"
+                                         x:Name="AudiogramItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Avaliações">
+                            <hc:SideMenuItem.Icon>
+                                <md:PackIcon x:Name="AudiogramIcon"
+                                             Kind="HeadsetDock"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem Header="Ajuste"
+                                         x:Name="CalibrationItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Ajuste"
+                                         Visibility="Hidden">
+                            <hc:SideMenuItem.Icon>
+                                <md:PackIcon x:Name="CalibrationIcon"
+                                             Kind="Earbuds"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem IsEnabled="False"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,70,5">
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem Header="Configuração"
+                                         x:Name="SettingsItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Configuração">
+                            <hc:SideMenuItem.Icon>
+                                <md:PackIcon x:Name="SettingsIcon"
+                                             Kind="Gear"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+
+                        <hc:SideMenuItem Header="Sair"
+                                         x:Name="LogoutItem"
+                                         FontSize="24"
+                                         Foreground="White"
+                                         Background="Transparent"
+                                         Margin="10,5,20,5"
+                                         ToolTip="Sair">
+                            <hc:SideMenuItem.Icon>
+                                <md:PackIcon x:Name="LogoutIcon"
+                                             Kind="LogoutVariant"
+                                             Width="30"
+                                             Height="30"
+                                             Foreground="White" />
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+                    </hc:SideMenu>
+                </hc:TransitioningContentControl>
+            </Grid>
+        </Grid>
+
+        <!--Body-->
+        <Grid Grid.Column="1"
+              x:Name="Main"
+              Width="auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--WindowButtons-->
+            <Grid Grid.Row="0"  MouseLeftButtonDown="Window_MouseDown"  Background="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="55" />
+                    <ColumnDefinition Width="55" />
+                    <ColumnDefinition Width="55" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="1"
+                           x:Name="CurrentPageText"
+                           Text="Início"
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           Foreground="{StaticResource BackgroundColor}"
+                           Margin="10" />
+
+                <!--Clear-->
+                <Grid Grid.Column="3">
+                    <Viewbox MaxWidth="220" />
+                </Grid>
+                <Button Grid.Column="3"
+                        x:Name="ClearButton"
+                        Visibility="Hidden"
+                        md:ButtonAssist.CornerRadius="25"
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        Background="{StaticResource BackgroundColor}"
+                        ToolTip="Fechar Mensagens">
+                    <md:PackIcon Kind="MessageOffOutline"
+                                 Foreground="White"
+                                 Width="20" />
+                </Button>
+
+                <!--Minimize-->
+                <Button Grid.Column="5"
+                        Width="35" Height="35"
+                        x:Name="MinimizeButton"
+                        BorderBrush="Transparent"
+                        Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryDarkButton}"
+                        Background="{StaticResource BackgroundColor}"
+                        ToolTip="Minimizar">
+                    <md:PackIcon Kind="Minus"
+                                 Foreground="White"
+                                 Width="25" Height="25" />
+                </Button>
+
+                <!--Maximize-->
+                <Button Grid.Column="6"
+                        Width="35" Height="35"
+                        x:Name="MaximizeButton"
+                        BorderBrush="Transparent"
+                        Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryDarkButton}"
+                        Background="{StaticResource BackgroundColor}"
+                        ToolTip="Maximizar">
+                    <md:PackIcon Kind="SquareOutline"
+                                 Foreground="White"
+                                 Width="20" Height="20" />
+                </Button>
+
+                <!--Close-->
+                <Button Grid.Column="7"
+                        x:Name="CloseButton"
+                        Width="35" Height="35"
+                        BorderBrush="Transparent"
+                        Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryDarkButton}"
+                        Background="{StaticResource BackgroundColor}"
+                        ToolTip="Fechar">
+                    <md:PackIcon Kind="Close"
+                                 Foreground="White"
+                                 Width="25" Height="25" />
+                </Button>
+            </Grid>
+
+            <!--Content-->
+            <ContentControl Grid.Row="1"
+                            x:Name="CurrentWindow" />
+        </Grid>
+    </Grid>
+</Window>

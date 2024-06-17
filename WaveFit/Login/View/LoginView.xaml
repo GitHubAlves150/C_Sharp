@@ -1,0 +1,83 @@
+﻿<Window x:Class="WaveFit2.Login.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Name="Login"
+        Title="WaveFit Login"
+        Height="520"
+        Width="620"
+        AllowsTransparency="true"
+        Background="{x:Null}"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+
+    <materialDesign:Card UniformCornerRadius="15"
+                         materialDesign:ElevationAssist.Elevation="Dp4"
+                         Margin="5"
+                         Background="White">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.75*" />
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="0.25*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0"
+                  Grid.RowSpan="4">
+                <Image HorizontalAlignment="Center"
+                       Stretch="Fill" Source="/Resources/LoginWave.png" />
+            </Grid>
+
+            <!--Logo WaveTech-->
+            <Grid Grid.Column="1"
+                  Grid.Row="0">
+
+                <Grid Grid.Row="0">
+                    <Image  VerticalAlignment="center"
+                            HorizontalAlignment="Center"
+
+                            Width="150" Source="/Resources/newLogo.png" />
+                </Grid>
+            </Grid>
+
+            <!-- Login and Register -->
+            <Grid Grid.Column="1"
+                  Grid.Row="1"
+                  HorizontalAlignment="Center"
+                  Height="48">
+                <TabControl materialDesign:ColorZoneAssist.Background="{DynamicResource MaterialDesignCardBackground}"
+                            materialDesign:ColorZoneAssist.Foreground="{StaticResource BackgroundColor}"
+                            materialDesign:ColorZoneAssist.Mode="Custom"
+                            SelectionChanged="TabControl_SelectionChanged">
+
+                    <TabItem Header="Entrar"
+                             x:Name="TabLogin" />
+                    <TabItem Header="Registrar"
+                             x:Name="TabRegister" />
+                </TabControl>
+            </Grid>
+
+            <Grid Grid.Column="1"
+                  Grid.Row="2">
+                <ContentControl x:Name="UserControlLogin" />
+            </Grid>
+
+            <Grid Grid.Column="1"
+                     Grid.Row="3">
+                <TextBlock Text="Versão 2.3.2" HorizontalAlignment="Center"></TextBlock>
+            </Grid>
+        </Grid>
+    </materialDesign:Card>
+</Window>

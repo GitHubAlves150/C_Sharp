@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.MicrophoneUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <ComboBox Margin="5" x:Name="Microphone"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Microfone" />
+
+        <TextBlock Text="Ganho"
+                       Grid.Row="1"
+                       HorizontalAlignment="Center"
+                       Margin="5" />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Slider x:Name="SliderMatrixGain"
+                    Maximum="0"
+                    Minimum="-40"
+                    IsSnapToTickEnabled="True"
+                    TickFrequency="2"
+                    TickPlacement="TopLeft"
+                    Style="{StaticResource SliderBaseStyle}"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    Value="0"
+                    Grid.Row="2"
+                    Margin="5"
+                    Foreground="{StaticResource BackgroundColor}" />
+        </Grid>
+
+        <TextBlock Margin="5" x:Name="ValueSliderMatrixGain"
+                       Grid.Row="3"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

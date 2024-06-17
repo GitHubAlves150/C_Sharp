@@ -1,0 +1,1055 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.OutputUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+
+    <Grid x:Name="OutputTab" Visibility="Visible">
+
+        <Grid x:Name="Audion16Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <GroupBox Header="Limiar de Compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C1TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A16C2TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C3TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A16C4TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C5TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A16C6TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C7TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 7" />
+                                <ComboBox Margin="5" x:Name="A16C8TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 8" />
+                            </Grid>
+
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C9TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 9" />
+                                <ComboBox Margin="5" x:Name="A16C10TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 10" />
+                            </Grid>
+
+                            <Grid Grid.Row="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C11TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 11" />
+                                <ComboBox Margin="5" x:Name="A16C12TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 12" />
+                            </Grid>
+
+                            <Grid Grid.Row="6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C13TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 13" />
+                                <ComboBox Margin="5" x:Name="A16C14TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 14" />
+                            </Grid>
+
+                            <Grid Grid.Row="7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C15TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 15" />
+                                <ComboBox Margin="5" x:Name="A16C16TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 16" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <GroupBox Header="Limitador de Saída Máxima"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C1MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A16C2MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C3MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A16C4MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C5MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A16C6MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C7MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 7" />
+                                <ComboBox Margin="5" x:Name="A16C8MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 8" />
+                            </Grid>
+
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C9MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 9" />
+                                <ComboBox Margin="5" x:Name="A16C10MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 10" />
+                            </Grid>
+
+                            <Grid Grid.Row="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C11MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 11" />
+                                <ComboBox Margin="5" x:Name="A16C12MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 12" />
+                            </Grid>
+
+                            <Grid Grid.Row="6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C13MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 13" />
+                                <ComboBox Margin="5" x:Name="A16C14MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 14" />
+                            </Grid>
+
+                            <Grid Grid.Row="7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C15MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 15" />
+                                <ComboBox Margin="5" x:Name="A16C16MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 16" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Column="4">
+                    <GroupBox Header="Razão de compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C1R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A16C2R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C3R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A16C4R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C5R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A16C6R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C7R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 7" />
+                                <ComboBox Margin="5" x:Name="A16C8R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 8" />
+                            </Grid>
+
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C9R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 9" />
+                                <ComboBox Margin="5" x:Name="A16C10R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 10" />
+                            </Grid>
+
+                            <Grid Grid.Row="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C11R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 11" />
+                                <ComboBox Margin="5" x:Name="A16C12R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 12" />
+                            </Grid>
+
+                            <Grid Grid.Row="6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C13R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 13" />
+                                <ComboBox Margin="5" x:Name="A16C14R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 14" />
+                            </Grid>
+
+                            <Grid Grid.Row="7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A16C15R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 15" />
+                                <ComboBox Margin="5" x:Name="A16C16R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 16" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion8Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <GroupBox Header="Limiar de Compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C1TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A8C2TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C3TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A8C4TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C5TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A8C6TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C7TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 7" />
+                                <ComboBox Margin="5" x:Name="A8C8TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 8" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <GroupBox Header="Limitador de Saída Máxima"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C1MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A8C2MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C3MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A8C4MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C5MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A8C6MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C7MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 7" />
+                                <ComboBox Margin="5" x:Name="A8C8MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 8" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <GroupBox Header="Razão de compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C1R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A8C2R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C3R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A8C4R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C5R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A8C6R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A8C7R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 7" />
+                                <ComboBox Margin="5" x:Name="A8C8R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 8" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion6Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <GroupBox Header="Limiar de Compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C1TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A6C2TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C3TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A6C4TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C5TK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A6C6TK"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <GroupBox Header="Limitador de Saída Máxima"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C1MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A6C2MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C3MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A6C4MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C5MPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A6C6MPO"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <GroupBox Header="Razão de compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C1R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A6C2R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C3R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A6C4R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A6C5R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 5" />
+                                <ComboBox Margin="5" x:Name="A6C6R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 6" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="Audion4Grid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <GroupBox Header="Limiar de Compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A4CTK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Todos canais" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <GroupBox Header="Limitador de Saída Máxima"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A4CMPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Todos canais" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <GroupBox Header="Razão de compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A4C1R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="A4C2R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="A4C3R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 3" />
+                                <ComboBox Margin="5" x:Name="A4C4R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 4" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="SpinNRGrid" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <GroupBox Header="Limiar de Compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="SpinNRCTK"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Todos canais" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <GroupBox Header="Limitador de Saída Máxima"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="SpinNRCMPO"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Todos canais" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <GroupBox Header="Razão de compressão"
+                              Style="{StaticResource InputElementBaseStyle}"
+                              Background="#FFFCF9">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Margin="5" x:Name="SpinNRC1R"
+                                  Grid.Column="0"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 1" />
+                                <ComboBox Margin="5" x:Name="SpinNRC2R"
+                                  Grid.Column="1"
+                                  Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                  md:HintAssist.Hint="Canal 2" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

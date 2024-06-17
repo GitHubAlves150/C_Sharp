@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.AlgorithmUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             Background="#FFFCF9">
+
+    <Grid>
+        <Grid x:Name="Audion16Grid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="A16AFC"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Cancelador Adaptativo de microfonia" />
+
+            <ComboBox Margin="5" x:Name="A16ADS"
+                      Grid.Row="1"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Sensibilidade Direcional Adaptativa" />
+
+            <ComboBox Margin="5" x:Name="A16NR"
+                      Grid.Row="2"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Redutor de Ruído" />
+
+            <ComboBox Margin="5" x:Name="A16NGA"
+                      Grid.Row="3"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Amplitude do Gerador de Ruído Digital" />
+
+            <ComboBox Margin="5" x:Name="A16WS"
+                      Grid.Row="4"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Supressão de Vento" />
+        </Grid>
+
+        <Grid x:Name="Audion8Grid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="A8AFC"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Cancelador Adaptativo de microfonia" />
+
+            <ComboBox Margin="5" x:Name="A8ADS"
+                      Grid.Row="1"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Sensibilidade Direcional Adaptativa" />
+
+            <ComboBox Margin="5" x:Name="A8NR"
+                      Grid.Row="2"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Redutor de Ruído" />
+
+            <ComboBox Margin="5" x:Name="A8NGA"
+                      Grid.Row="3"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Amplitude do Gerador de Ruído Digital" />
+        </Grid>
+
+        <Grid x:Name="Audion6Grid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="A6AFC"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Cancelador Adaptativo de microfonia" />
+
+            <ComboBox Margin="5" x:Name="A6NR"
+                      Grid.Row="2"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Redutor de Ruído" />
+        </Grid>
+
+        <Grid x:Name="Audion4Grid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="A4AFC"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Cancelador Adaptativo de microfonia" />
+
+            <ComboBox Margin="5" x:Name="A4NR"
+                      Grid.Row="2"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Redutor de Ruído" />
+
+            <ComboBox Margin="5" x:Name="A4ME"
+                      Grid.Row="4"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Expansão de Microfone" />
+        </Grid>
+
+        <Grid x:Name="SpinNRGrid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ComboBox Margin="5" x:Name="SpinNRAFC"
+                      Grid.Row="0"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Cancelador Adaptativo de microfonia" />
+
+            <ComboBox Margin="5" x:Name="SpinNRNR"
+                      Grid.Row="2"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Redutor de Ruído" />
+
+            <ComboBox Margin="5" x:Name="SpinNRME"
+                      Grid.Row="4"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      md:HintAssist.Hint="Expansão de Microfone" />
+        </Grid>
+    </Grid>
+</UserControl>

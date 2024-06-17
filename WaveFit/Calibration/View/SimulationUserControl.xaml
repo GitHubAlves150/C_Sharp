@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="WaveFit2.Calibration.View.SimulationUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WaveFit2.Calibration.View"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d"
+             d:DesignHeight="698"
+             d:DesignWidth="1126"
+             Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.1*" />
+            <RowDefinition Height="10.8*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="220" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock  Grid.Column="1"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Text="Paciente:" />
+
+            <TextBox x:Name="SelectedPatient"
+                     Grid.Column="2"
+                     Height="48"
+                     md:HintAssist.Hint="Paciente Selecionado"
+                     IsEnabled="False"
+                     Margin="5"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+
+            <Button x:Name="DetectButton"
+                    Grid.Column="4"
+                    Background="#009CA3"
+                    Margin="5"
+                    Width="200">
+                <StackPanel Orientation="Horizontal">
+                    <md:PackIcon Kind="Search"
+                             Foreground="#FFFCF9" />
+                    <TextBlock Text="Detectar aparelho"
+                               Margin="5,0,0,0"
+                               Foreground="#FFFCF9" />
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="75" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox x:Name="RModels"
+                              Grid.Column="1"
+                              Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                              md:HintAssist.Hint="Modelo"
+                              Margin="5" />
+                </Grid>
+
+                <ContentControl x:Name="RightAudiograph"
+                                Grid.Row="1"
+                                Margin="5" />
+
+                <Border BorderBrush="#009CA3"
+                        Background="#FFFCF9"
+                        BorderThickness="1"
+                        Grid.Row="2"
+                        Margin="25"
+                        Width="200"
+                        Height="200"
+                        CornerRadius="50">
+                    <Image x:Name="RHI"
+                           Height="150"
+                           Width="150"
+                           Source="/Resources/HearingAidIDLE.png" />
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox x:Name="LModels"
+                              Grid.Column="1"
+                              Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                              md:HintAssist.Hint="Modelo"
+                              Margin="5" />
+                </Grid>
+
+                <ContentControl x:Name="LeftAudiograph"
+                                Grid.Row="1"
+                                Margin="5" />
+
+                <Border BorderBrush="#009CA3"
+                        Background="White"
+                        BorderThickness="1"
+                        Grid.Row="2"
+                        Margin="25"
+                        Width="200"
+                        Height="200"
+                        CornerRadius="50">
+                    <Image x:Name="LHI"
+                           Height="150"
+                           Width="150"
+                           Source="/Resources/HearingAidIDLE.png" />
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
