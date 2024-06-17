@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\views\\veiculobuscar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:views\\veiculobuscar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\viewmodels\\veiculosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:viewmodels\\veiculosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\views\\veiculobuscar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:views\\veiculobuscar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\services\\relaycommad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:services\\relaycommad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\appmvvm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:appmvvm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\models\\veiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:models\\veiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|c:\\users\\develpment\\documents\\github\\appmvvm\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F7E2920-7C63-480B-8862-6C0AD2048A49}|AppMVVM.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RelayCommad.cs",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Services\\RelayCommad.cs",
+              "RelativeDocumentMoniker": "Services\\RelayCommad.cs",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Services\\RelayCommad.cs",
+              "RelativeToolTip": "Services\\RelayCommad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T02:20:28.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VeiculosViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\ViewModels\\VeiculosViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\VeiculosViewModel.cs",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\ViewModels\\VeiculosViewModel.cs",
+              "RelativeToolTip": "ViewModels\\VeiculosViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T02:02:57.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VeiculoBuscar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Views\\VeiculoBuscar.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\VeiculoBuscar.xaml.cs",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Views\\VeiculoBuscar.xaml.cs*",
+              "RelativeToolTip": "Views\\VeiculoBuscar.xaml.cs*",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T01:23:32.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VeiculoBuscar.xaml",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Views\\VeiculoBuscar.xaml",
+              "RelativeDocumentMoniker": "Views\\VeiculoBuscar.xaml",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Views\\VeiculoBuscar.xaml",
+              "RelativeToolTip": "Views\\VeiculoBuscar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-17T01:13:30.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Veiculos.cs",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Models\\Veiculos.cs",
+              "RelativeDocumentMoniker": "Models\\Veiculos.cs",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\Models\\Veiculos.cs",
+              "RelativeToolTip": "Models\\Veiculos.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T23:12:29.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppMVVM",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\AppMVVM.csproj",
+              "RelativeDocumentMoniker": "AppMVVM.csproj",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\AppMVVM.csproj",
+              "RelativeToolTip": "AppMVVM.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-16T23:11:00.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-16T22:55:11.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Develpment\\Documents\\GitHub\\AppMVVM\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T22:54:56.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
