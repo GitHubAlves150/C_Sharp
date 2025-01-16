@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\bin\Debug\Passagem_por_valor_e_porreferencia.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\bin\Debug\Passagem_por_valor_e_porreferencia.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\bin\Debug\Passagem_por_valor_e_porreferencia.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\obj\Debug\Passagem_por_valor_e_porreferencia.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\obj\Debug\Passagem_por_valor_e_porreferencia.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\obj\Debug\Passagem_por_valor_e_porreferencia.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_por_valor_e_porreferencia\obj\Debug\Passagem_por_valor_e_porreferencia.pdb

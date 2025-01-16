@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\bin\Debug\ConversaoEstreitamento.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\bin\Debug\ConversaoEstreitamento.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\bin\Debug\ConversaoEstreitamento.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\obj\Debug\ConversaoEstreitamento.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\obj\Debug\ConversaoEstreitamento.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\obj\Debug\ConversaoEstreitamento.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ConversaoEstreitamento\obj\Debug\ConversaoEstreitamento.pdb

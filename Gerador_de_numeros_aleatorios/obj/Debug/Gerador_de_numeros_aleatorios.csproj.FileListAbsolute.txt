@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\bin\Debug\Gerador_de_numeros_aleatorios.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\bin\Debug\Gerador_de_numeros_aleatorios.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\bin\Debug\Gerador_de_numeros_aleatorios.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\obj\Debug\Gerador_de_numeros_aleatorios.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\obj\Debug\Gerador_de_numeros_aleatorios.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\obj\Debug\Gerador_de_numeros_aleatorios.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Gerador_de_numeros_aleatorios\obj\Debug\Gerador_de_numeros_aleatorios.pdb

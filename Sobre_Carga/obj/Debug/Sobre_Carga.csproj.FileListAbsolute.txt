@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\bin\Debug\Sobre_Carga.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\bin\Debug\Sobre_Carga.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\bin\Debug\Sobre_Carga.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\obj\Debug\Sobre_Carga.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\obj\Debug\Sobre_Carga.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\obj\Debug\Sobre_Carga.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Sobre_Carga\obj\Debug\Sobre_Carga.pdb
