@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\bin\Debug\ordenacaoVetores.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\bin\Debug\ordenacaoVetores.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\bin\Debug\ordenacaoVetores.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\obj\Debug\ordenacaoVetores.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\obj\Debug\ordenacaoVetores.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\obj\Debug\ordenacaoVetores.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ordenacaoVetores\obj\Debug\ordenacaoVetores.pdb

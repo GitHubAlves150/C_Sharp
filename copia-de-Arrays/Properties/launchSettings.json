@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "copia-de-Arrays": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

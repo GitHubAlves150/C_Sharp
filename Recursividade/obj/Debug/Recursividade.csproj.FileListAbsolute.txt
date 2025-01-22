@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\bin\Debug\Recursividade.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\bin\Debug\Recursividade.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\bin\Debug\Recursividade.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Recursividade\obj\Debug\Recursividade.Form1.resources

@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\bin\Debug\ArrayMultidimencional.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\bin\Debug\ArrayMultidimencional.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\bin\Debug\ArrayMultidimencional.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\obj\Debug\ArrayMultidimencional.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\obj\Debug\ArrayMultidimencional.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\obj\Debug\ArrayMultidimencional.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ArrayMultidimencional\obj\Debug\ArrayMultidimencional.pdb

@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\bin\Debug\Passagem_Arrray_Metodos.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\bin\Debug\Passagem_Arrray_Metodos.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\bin\Debug\Passagem_Arrray_Metodos.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\obj\Debug\Passagem_Arrray_Metodos.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\obj\Debug\Passagem_Arrray_Metodos.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\obj\Debug\Passagem_Arrray_Metodos.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Passagem_Arrray_Metodos\obj\Debug\Passagem_Arrray_Metodos.pdb

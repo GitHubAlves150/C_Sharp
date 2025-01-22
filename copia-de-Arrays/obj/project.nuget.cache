@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NLOTl5fJ044=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\copia-de-Arrays\\copia-de-Arrays.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Alves\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+  ],
+  "logs": []
+}
