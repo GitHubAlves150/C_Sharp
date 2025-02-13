@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\bin\Debug\Tratamento_Exeções_teste_Deepseek00.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\bin\Debug\Tratamento_Exeções_teste_Deepseek00.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\bin\Debug\Tratamento_Exeções_teste_Deepseek00.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tratamento_Exeções_teste_Deepseek00\obj\Debug\Tratamento_Exeções_teste_Deepseek00.pdb

@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\bin\Debug\ListaContatos.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\bin\Debug\ListaContatos.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\bin\Debug\ListaContatos.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\obj\Debug\ListaContatos.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\obj\Debug\ListaContatos.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\obj\Debug\ListaContatos.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\ListaContatos\obj\Debug\ListaContatos.pdb

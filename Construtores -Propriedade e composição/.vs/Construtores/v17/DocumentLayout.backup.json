@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Construtores -Propriedade e composi\u00E7\u00E3o\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{911FF7D0-1C55-4495-AAFD-DEE606F88D67}|Construtores.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\construtores -propriedade e composi\u00E7\u00E3o\\pwm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{911FF7D0-1C55-4495-AAFD-DEE606F88D67}|Construtores.csproj|solutionrelative:pwm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{911FF7D0-1C55-4495-AAFD-DEE606F88D67}|Construtores.csproj|C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Construtores -Propriedade e composi\u00E7\u00E3o\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{911FF7D0-1C55-4495-AAFD-DEE606F88D67}|Construtores.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PWM.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Construtores -Propriedade e composi\u00E7\u00E3o\\PWM.cs",
+              "RelativeDocumentMoniker": "PWM.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Construtores -Propriedade e composi\u00E7\u00E3o\\PWM.cs",
+              "RelativeToolTip": "PWM.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T23:39:46.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Construtores -Propriedade e composi\u00E7\u00E3o\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Construtores -Propriedade e composi\u00E7\u00E3o\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T23:34:49.185Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

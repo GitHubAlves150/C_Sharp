@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\classe_exemplo - sinewave\\functiongen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|solutionrelative:functiongen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\classe_exemplo - sinewave\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|solutionrelative:date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\sinewave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|solutionrelative:sinewave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\classe_exemplo - sinewave\\pwm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80EF3FE6-6FAD-42F8-9F16-49A3ED13D001}|Classe_Exemplo.csproj|solutionrelative:pwm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PWM.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\PWM.cs",
+              "RelativeDocumentMoniker": "PWM.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\PWM.cs",
+              "RelativeToolTip": "PWM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:33:13.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FunctionGen.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\FunctionGen.cs",
+              "RelativeDocumentMoniker": "FunctionGen.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\FunctionGen.cs",
+              "RelativeToolTip": "FunctionGen.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswDEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:26:03.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Date.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\Date.cs",
+              "RelativeDocumentMoniker": "Date.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\Date.cs",
+              "RelativeToolTip": "Date.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwC8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T15:29:28.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SineWave.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\SineWave.cs",
+              "RelativeDocumentMoniker": "SineWave.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\SineWave.cs",
+              "RelativeToolTip": "SineWave.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwD0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T14:53:35.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Classe_Exemplo - SineWave\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T14:16:01.899Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\bin\Debug\tratamento_Excecao.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\bin\Debug\tratamento_Excecao.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\bin\Debug\tratamento_Excecao.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\obj\Debug\tratamento_Excecao.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\obj\Debug\tratamento_Excecao.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\obj\Debug\tratamento_Excecao.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\tratamento_Excecao\obj\Debug\tratamento_Excecao.pdb

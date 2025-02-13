@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\bin\Debug\TratramentoExecoes.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\bin\Debug\TratramentoExecoes.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\bin\Debug\TratramentoExecoes.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\TratramentoExecoes\obj\Debug\TratramentoExecoes.pdb

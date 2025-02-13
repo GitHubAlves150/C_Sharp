@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\bin\Debug\Tipos_de_excecoes.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\bin\Debug\Tipos_de_excecoes.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\bin\Debug\Tipos_de_excecoes.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Tipos_de_excecoes\obj\Debug\Tipos_de_excecoes.pdb

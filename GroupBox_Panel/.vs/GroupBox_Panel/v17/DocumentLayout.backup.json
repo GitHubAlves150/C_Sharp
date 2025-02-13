@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8EF4DC-9D7C-4B69-B751-C509802F926B}|GroupBox_Panel.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\groupbox_panel\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE8EF4DC-9D7C-4B69-B751-C509802F926B}|GroupBox_Panel.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8EF4DC-9D7C-4B69-B751-C509802F926B}|GroupBox_Panel.csproj|C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8EF4DC-9D7C-4B69-B751-C509802F926B}|GroupBox_Panel.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8EF4DC-9D7C-4B69-B751-C509802F926B}|GroupBox_Panel.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\groupbox_panel\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8EF4DC-9D7C-4B69-B751-C509802F926B}|GroupBox_Panel.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAqwMQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T15:44:05.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAywDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T14:34:51.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\GroupBox_Panel\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T14:27:17.928Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

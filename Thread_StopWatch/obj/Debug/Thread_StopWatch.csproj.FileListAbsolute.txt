@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\bin\Debug\Thread_StopWatch.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\bin\Debug\Thread_StopWatch.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\bin\Debug\Thread_StopWatch.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\obj\Debug\Thread_StopWatch.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\obj\Debug\Thread_StopWatch.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\obj\Debug\Thread_StopWatch.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread_StopWatch\obj\Debug\Thread_StopWatch.pdb

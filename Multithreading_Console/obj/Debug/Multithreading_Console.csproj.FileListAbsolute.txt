@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\bin\Debug\Multithreading_Console.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\bin\Debug\Multithreading_Console.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\bin\Debug\Multithreading_Console.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\obj\Debug\Multithreading_Console.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\obj\Debug\Multithreading_Console.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\obj\Debug\Multithreading_Console.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Multithreading_Console\obj\Debug\Multithreading_Console.pdb

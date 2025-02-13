@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\bin\Debug\Eventos.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\bin\Debug\Eventos.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\bin\Debug\Eventos.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Eventos\obj\Debug\Eventos.pdb

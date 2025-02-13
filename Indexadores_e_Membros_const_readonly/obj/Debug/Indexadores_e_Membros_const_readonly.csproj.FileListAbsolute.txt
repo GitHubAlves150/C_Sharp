@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\bin\Debug\Indexadores_e_Membros_const_readonly.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\bin\Debug\Indexadores_e_Membros_const_readonly.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\bin\Debug\Indexadores_e_Membros_const_readonly.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Indexadores_e_Membros_const_readonly\obj\Debug\Indexadores_e_Membros_const_readonly.pdb

@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\bin\Debug\indexadores.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\bin\Debug\indexadores.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\bin\Debug\indexadores.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\obj\Debug\indexadores.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\obj\Debug\indexadores.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\obj\Debug\indexadores.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\indexadores\obj\Debug\indexadores.pdb

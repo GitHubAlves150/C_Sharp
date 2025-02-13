@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6C8D65-4B32-4FDD-89B0-C6CB8D5EB60F}|Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\tratamento_exe\u00E7\u00F5es_teste_deepseek00\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F6C8D65-4B32-4FDD-89B0-C6CB8D5EB60F}|Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6C8D65-4B32-4FDD-89B0-C6CB8D5EB60F}|Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\tratamento_exe\u00E7\u00F5es_teste_deepseek00\\engrenagem_anelar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F6C8D65-4B32-4FDD-89B0-C6CB8D5EB60F}|Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00.csproj|solutionrelative:engrenagem_anelar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6C8D65-4B32-4FDD-89B0-C6CB8D5EB60F}|Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\tratamento_exe\u00E7\u00F5es_teste_deepseek00\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2F6C8D65-4B32-4FDD-89B0-C6CB8D5EB60F}|Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Engrenagem_Anelar.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\Engrenagem_Anelar.cs",
+              "RelativeDocumentMoniker": "Engrenagem_Anelar.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\Engrenagem_Anelar.cs",
+              "RelativeToolTip": "Engrenagem_Anelar.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T22:42:34.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAD4vywAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T22:23:20.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Tratamento_Exe\u00E7\u00F5es_teste_Deepseek00\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T22:00:03.572Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

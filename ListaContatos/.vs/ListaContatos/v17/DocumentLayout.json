@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7E2E3C2-4F03-4742-A787-1BB962D1FF15}|ListaContatos.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\listacontatos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7E2E3C2-4F03-4742-A787-1BB962D1FF15}|ListaContatos.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7E2E3C2-4F03-4742-A787-1BB962D1FF15}|ListaContatos.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\listacontatos\\listacontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7E2E3C2-4F03-4742-A787-1BB962D1FF15}|ListaContatos.csproj|solutionrelative:listacontato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7E2E3C2-4F03-4742-A787-1BB962D1FF15}|ListaContatos.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\listacontatos\\vetorcontatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7E2E3C2-4F03-4742-A787-1BB962D1FF15}|ListaContatos.csproj|solutionrelative:vetorcontatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VetorContatos.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\VetorContatos.cs",
+              "RelativeDocumentMoniker": "VetorContatos.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\VetorContatos.cs",
+              "RelativeToolTip": "VetorContatos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T15:29:30.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaContato.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\ListaContato.cs",
+              "RelativeDocumentMoniker": "ListaContato.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\ListaContato.cs",
+              "RelativeToolTip": "ListaContato.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:40:07.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\ListaContatos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T14:38:39.479Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

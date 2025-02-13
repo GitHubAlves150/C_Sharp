@@ -1,0 +1,14 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\bin\Debug\Classe_Exemplo.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\bin\Debug\Classe_Exemplo.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\bin\Debug\Classe_Exemplo.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\obj\Debug\Classe_Exemplo.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\obj\Debug\Classe_Exemplo.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\obj\Debug\Classe_Exemplo.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo\obj\Debug\Classe_Exemplo.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\bin\Debug\Classe_Exemplo.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\bin\Debug\Classe_Exemplo.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\bin\Debug\Classe_Exemplo.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\obj\Debug\Classe_Exemplo.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\obj\Debug\Classe_Exemplo.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\obj\Debug\Classe_Exemplo.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Classe_Exemplo - SineWave\obj\Debug\Classe_Exemplo.pdb

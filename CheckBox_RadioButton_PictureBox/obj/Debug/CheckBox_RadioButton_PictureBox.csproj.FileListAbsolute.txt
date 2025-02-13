@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\bin\Debug\CheckBox_RadioButton_PictureBox.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\bin\Debug\CheckBox_RadioButton_PictureBox.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\bin\Debug\CheckBox_RadioButton_PictureBox.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CheckBox_RadioButton_PictureBox\obj\Debug\CheckBox_RadioButton_PictureBox.pdb

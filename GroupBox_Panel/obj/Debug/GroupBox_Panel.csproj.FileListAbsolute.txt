@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\bin\Debug\GroupBox_Panel.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\bin\Debug\GroupBox_Panel.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\bin\Debug\GroupBox_Panel.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\GroupBox_Panel\obj\Debug\GroupBox_Panel.pdb
