@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\bin\Debug\Exercicio pratico com asynt e await.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\bin\Debug\Exercicio pratico com asynt e await.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\bin\Debug\Exercicio pratico com asynt e await.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\obj\Debug\Exercicio pratico com asynt e await.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\obj\Debug\Exercicio pratico com asynt e await.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\obj\Debug\Exercicio pratico com asynt e await.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Exercicio pratico com asynt e await\obj\Debug\Exercicio pratico com asynt e await.pdb

@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\bin\Debug\CSharpV8.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\bin\Debug\CSharpV8.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\bin\Debug\CSharpV8.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\obj\Debug\CSharpV8.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\obj\Debug\CSharpV8.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\obj\Debug\CSharpV8.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\CSharpV8\obj\Debug\CSharpV8.pdb
