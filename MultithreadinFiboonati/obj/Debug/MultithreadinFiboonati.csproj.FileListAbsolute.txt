@@ -1,0 +1,10 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\bin\Debug\MultithreadinFiboonati.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\bin\Debug\MultithreadinFiboonati.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\bin\Debug\MultithreadinFiboonati.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.Form1.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.Properties.Resources.resources
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.csproj.GenerateResource.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\MultithreadinFiboonati\obj\Debug\MultithreadinFiboonati.pdb

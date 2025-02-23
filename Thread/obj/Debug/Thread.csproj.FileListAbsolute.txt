@@ -1,0 +1,7 @@
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\bin\Debug\Thread.exe.config
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\bin\Debug\Thread.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\bin\Debug\Thread.pdb
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\obj\Debug\Thread.csproj.AssemblyReference.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\obj\Debug\Thread.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\obj\Debug\Thread.exe
+C:\Users\Lucas Alves\Documents\GitHub_Conta_Gmail\C_Sharp\Thread\obj\Debug\Thread.pdb
