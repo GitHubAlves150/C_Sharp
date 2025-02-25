@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Async_Await\\",
+  "WorkspaceRootPath": "C:\\Users\\lucas\\Documents\\GitHub_Gmail\\C_Sharp\\Async_Await\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BD09D2B-9012-4200-B612-E939D91FA034}|Async_Await.csproj|c:\\users\\lucas alves\\documents\\github_conta_gmail\\c_sharp\\async_await\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BD09D2B-9012-4200-B612-E939D91FA034}|Async_Await.csproj|c:\\users\\lucas\\documents\\github_gmail\\c_sharp\\async_await\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BD09D2B-9012-4200-B612-E939D91FA034}|Async_Await.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Async_Await\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\GitHub_Gmail\\C_Sharp\\Async_Await\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Lucas Alves\\Documents\\GitHub_Conta_Gmail\\C_Sharp\\Async_Await\\Program.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\GitHub_Gmail\\C_Sharp\\Async_Await\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
