@@ -1,0 +1,10 @@
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.Properties.Resources.resources
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.csproj.GenerateResource.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\bin\Debug\Program.exe.config
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\bin\Debug\Program.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\bin\Debug\Program.pdb
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.Form1.resources
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Program\Program\obj\Debug\Program.pdb
