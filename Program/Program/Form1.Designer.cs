@@ -214,7 +214,7 @@
             // groupBox_SISTEMAS_EMBARCADOS
             // 
             this.groupBox_SISTEMAS_EMBARCADOS.Controls.Add(this.checkBox7);
-            this.groupBox_SISTEMAS_EMBARCADOS.Location = new System.Drawing.Point(12, 208);
+            this.groupBox_SISTEMAS_EMBARCADOS.Location = new System.Drawing.Point(1395, 71);
             this.groupBox_SISTEMAS_EMBARCADOS.Name = "groupBox_SISTEMAS_EMBARCADOS";
             this.groupBox_SISTEMAS_EMBARCADOS.Size = new System.Drawing.Size(177, 100);
             this.groupBox_SISTEMAS_EMBARCADOS.TabIndex = 10;
@@ -236,7 +236,7 @@
             // groupBox_ENTRETERIMENTO
             // 
             this.groupBox_ENTRETERIMENTO.Controls.Add(this.checkBox8);
-            this.groupBox_ENTRETERIMENTO.Location = new System.Drawing.Point(207, 208);
+            this.groupBox_ENTRETERIMENTO.Location = new System.Drawing.Point(1590, 71);
             this.groupBox_ENTRETERIMENTO.Name = "groupBox_ENTRETERIMENTO";
             this.groupBox_ENTRETERIMENTO.Size = new System.Drawing.Size(177, 100);
             this.groupBox_ENTRETERIMENTO.TabIndex = 11;
@@ -259,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1470, 366);
+            this.ClientSize = new System.Drawing.Size(1799, 253);
             this.Controls.Add(this.groupBox_ENTRETERIMENTO);
             this.Controls.Add(this.groupBox_SISTEMAS_EMBARCADOS);
             this.Controls.Add(this.groupBox_iOt);
@@ -271,7 +271,7 @@
             this.Controls.Add(this.GroupBox_Inglês);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Areas de Trabalho";
             this.GroupBox_Inglês.ResumeLayout(false);
             this.GroupBox_Inglês.PerformLayout();
             this.groupBox1_Python.ResumeLayout(false);
