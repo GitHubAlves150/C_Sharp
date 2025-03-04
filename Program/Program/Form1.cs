@@ -238,6 +238,7 @@ namespace Program
             }
 
             string URL1 = "https://estudantesunisul.ead.br/";
+            string URL2 = "file:///C:/Users/lucas/Documents/GitHub_gmail/index-HTML/Livro_Computacao_Pesquisa%20e%20Ordenacao%20de%20Dados.pdf";
 
 
 
@@ -259,6 +260,7 @@ namespace Program
                     MessageBox.Show("Area de trabalho alterado!", "UNISUL");
                 }
                 Process.Start(navegador, URL1);
+                Process.Start(navegador, URL2);
 
             }
             catch (System.ComponentModel.Win32Exception ex)
