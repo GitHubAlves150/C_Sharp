@@ -1,0 +1,7 @@
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\bin\Debug\Construtores de String.exe.config
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\bin\Debug\Construtores de String.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\bin\Debug\Construtores de String.pdb
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\obj\Debug\Construtores de String.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\obj\Debug\Construtores de String.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\obj\Debug\Construtores de String.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String\Construtores de String\obj\Debug\Construtores de String.pdb

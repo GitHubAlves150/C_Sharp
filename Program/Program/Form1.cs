@@ -42,7 +42,7 @@ namespace Program
             string URL2 = "file:///C:/Users/lucas/Documents/GitHub_gmail/index-HTML/Recursos%20de%20aprendizado%20em%20ingles.html";
             string URL3 = "https://youglish.com/";
             string URL4 = "https://www.youtube.com/watch?v=E6KXA1mVBBE";
-
+            string URL5 = "https://youglish.com/pronounce/i_have/english#google_vignette";
 
             string navegador = "firefox.exe";
             try
@@ -64,6 +64,7 @@ namespace Program
                 Process.Start(navegador, URL2);
                 Process.Start(navegador, URL3);
                 Process.Start(navegador, URL4);
+                Process.Start(navegador, URL5);
             }
             catch(System.ComponentModel.Win32Exception ex)
             {
@@ -198,7 +199,7 @@ namespace Program
             string navegador = "firefox.exe";
             try
             {
-                string caminhoImagem = @"C:\Users\lucas\Documents\GitHub_gmail\index-HTML\python.png"; // Substitua com o caminho da sua imagem
+                string caminhoImagem = @"C:\Users\lucas\Documents\GitHub_gmail\index-HTML\csharp.png"; // Substitua com o caminho da sua imagem
 
                 // Altera o plano de fundo
                 int resultado = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, caminhoImagem, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);

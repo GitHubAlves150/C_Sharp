@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lucas\\Documents\\GitHub_gmail\\C_Sharp\\Construtores de String\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{800D268C-2F4B-4C31-BDCA-E87F07980A3F}|Construtores de String\\Construtores de String.csproj|c:\\users\\lucas\\documents\\github_gmail\\c_sharp\\construtores de string\\construtores de string\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{800D268C-2F4B-4C31-BDCA-E87F07980A3F}|Construtores de String\\Construtores de String.csproj|solutionrelative:construtores de string\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\GitHub_gmail\\C_Sharp\\Construtores de String\\Construtores de String\\Program.cs",
+              "RelativeDocumentMoniker": "Construtores de String\\Program.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\GitHub_gmail\\C_Sharp\\Construtores de String\\Construtores de String\\Program.cs",
+              "RelativeToolTip": "Construtores de String\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T16:18:41.269Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

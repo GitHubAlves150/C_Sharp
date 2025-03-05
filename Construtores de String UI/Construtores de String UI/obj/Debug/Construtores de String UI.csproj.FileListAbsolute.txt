@@ -1,0 +1,10 @@
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\bin\Debug\Construtores de String UI.exe.config
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\bin\Debug\Construtores de String UI.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\bin\Debug\Construtores de String UI.pdb
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores de String UI.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores_de_String_UI.Form1.resources
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores_de_String_UI.Properties.Resources.resources
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores de String UI.csproj.GenerateResource.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores de String UI.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores de String UI.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Construtores de String UI\Construtores de String UI\obj\Debug\Construtores de String UI.pdb
