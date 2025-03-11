@@ -1,0 +1,7 @@
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\bin\Debug\Strinbuilder.exe.config
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\bin\Debug\Strinbuilder.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\bin\Debug\Strinbuilder.pdb
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\obj\Debug\Strinbuilder.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\obj\Debug\Strinbuilder.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\obj\Debug\Strinbuilder.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Strinbuilder\Strinbuilder\obj\Debug\Strinbuilder.pdb

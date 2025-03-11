@@ -1,0 +1,7 @@
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\bin\Debug\Metodo GethashCode 2.exe.config
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\bin\Debug\Metodo GethashCode 2.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\bin\Debug\Metodo GethashCode 2.pdb
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\obj\Debug\Metodo GethashCode 2.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\obj\Debug\Metodo GethashCode 2.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\obj\Debug\Metodo GethashCode 2.exe
+C:\Users\lucas\Documents\GitHub_gmail\C_Sharp\Metodo GethashCode 2\Metodo GethashCode 2\obj\Debug\Metodo GethashCode 2.pdb

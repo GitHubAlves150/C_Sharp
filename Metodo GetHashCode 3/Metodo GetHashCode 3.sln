@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metodo GetHashCode 3", "Metodo GetHashCode 3\Metodo GetHashCode 3.csproj", "{0AE0FAD8-2C01-4D84-AADD-301637E8DCFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AE0FAD8-2C01-4D84-AADD-301637E8DCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE0FAD8-2C01-4D84-AADD-301637E8DCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE0FAD8-2C01-4D84-AADD-301637E8DCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE0FAD8-2C01-4D84-AADD-301637E8DCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {937FA5E0-D4F8-4488-8BD4-A01ACA889686}
+	EndGlobalSection
+EndGlobal

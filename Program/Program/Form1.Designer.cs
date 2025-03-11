@@ -46,6 +46,8 @@
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBox_ENTRETERIMENTO = new System.Windows.Forms.GroupBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.GroupBox_Inglês.SuspendLayout();
             this.groupBox1_Python.SuspendLayout();
             this.groupBox_ENGDACOMP.SuspendLayout();
@@ -55,6 +57,7 @@
             this.groupBox_iOt.SuspendLayout();
             this.groupBox_SISTEMAS_EMBARCADOS.SuspendLayout();
             this.groupBox_ENTRETERIMENTO.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkB_Ingles
@@ -255,11 +258,34 @@
             this.checkBox8.UseVisualStyleBackColor = true;
             this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBox9);
+            this.groupBox1.Location = new System.Drawing.Point(12, 194);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(177, 100);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ROADMAP";
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(5, 18);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(77, 17);
+            this.checkBox9.TabIndex = 1;
+            this.checkBox9.Text = "Conteúdos";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1799, 253);
+            this.ClientSize = new System.Drawing.Size(1799, 435);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_ENTRETERIMENTO);
             this.Controls.Add(this.groupBox_SISTEMAS_EMBARCADOS);
             this.Controls.Add(this.groupBox_iOt);
@@ -290,6 +316,8 @@
             this.groupBox_SISTEMAS_EMBARCADOS.PerformLayout();
             this.groupBox_ENTRETERIMENTO.ResumeLayout(false);
             this.groupBox_ENTRETERIMENTO.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -313,6 +341,8 @@
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.GroupBox groupBox_ENTRETERIMENTO;
         private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBox9;
     }
 }
 

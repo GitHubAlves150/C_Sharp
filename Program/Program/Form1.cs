@@ -40,9 +40,12 @@ namespace Program
 
             string URL1 = "https://www.youtube.com/watch?v=XbL9_FDaVYU&list=PL7BDB07039775D0A6";
             string URL2 = "file:///C:/Users/lucas/Documents/GitHub_gmail/index-HTML/Recursos%20de%20aprendizado%20em%20ingles.html";
-            string URL3 = "https://youglish.com/";
+            string URL3 = "https://app.e2language.com/Student/Home";
             string URL4 = "https://www.youtube.com/watch?v=E6KXA1mVBBE";
             string URL5 = "https://youglish.com/pronounce/i_have/english#google_vignette";
+            string URL6 = "https://www.bbc.co.uk/learningenglish/english/features/business-jargon/241216";
+            string URL7 = "https://learn.edusynch.com/toefl/practice/speaking";
+            string url8 = "https://global-exam.com/blog/pt/toefl-itp-teste-gratis/";
 
             string navegador = "firefox.exe";
             try
@@ -65,6 +68,7 @@ namespace Program
                 Process.Start(navegador, URL3);
                 Process.Start(navegador, URL4);
                 Process.Start(navegador, URL5);
+                Process.Start(navegador, URL6);
             }
             catch(System.ComponentModel.Win32Exception ex)
             {
@@ -338,6 +342,7 @@ namespace Program
                 MessageBox.Show(ex.Message);
             }
 
+            string URL0 = "";
             string URL1 = "file:///C:/Users/lucas/Documents/GitHub_gmail/index-HTML/Sistemas%20de%20Banco%20de%20Dados%20(Ramez%20Elmasri,%20Shamkant%20B.%20Navathe).pdf";
             string URL2 = "https://www.youtube.com/watch?v=pmAxIs5U1KI&list=PLxI8Can9yAHeHQr2McJ01e-ANyh3K0Lfq";
             string URL3 = "https://www.youtube.com/watch?v=Q_KTYFgvu1s&list=PLucm8g_ezqNoNHU8tjVeHmRGBFnjDIlxD";
@@ -361,6 +366,7 @@ namespace Program
                 {
                     MessageBox.Show("Area de trabalho alterado!", "BANCO DE DADOS");
                 }
+                Process.Start(navegador, URL0);
                 Process.Start(navegador, URL1);
                 Process.Start(navegador, URL2);
                 Process.Start(navegador, URL3);
@@ -479,14 +485,59 @@ namespace Program
                 MessageBox.Show(ex.Message);
             }
         }
-
-       
         //----------------------------------fIM sISTEMAS EMBARCADOS_____________________
 
+        //-----------------------------------RoadMap------------------------------------
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+
+            string caminho = "https://roadmap.sh/";
+            try
+            {
+                foreach (var processo in Process.GetProcessesByName("firefox"))
+                {
+                    processo.Kill();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+            //string URL1 = "C:\\Users\\lucas\\Documents\\Curso STM32 Gabriel vagio";
 
 
 
 
+            string navegador = "firefox.exe";
+            try
+            {
+                string caminhoImagem = @"C:\Users\lucas\Documents\GitHub_gmail\index-HTML\Piramide.jpg"; // Substitua com o caminho da sua imagem
+
+                // Altera o plano de fundo
+                int resultado = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, caminhoImagem, SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+
+                if (resultado == 0)
+                {
+                    MessageBox.Show("Falha ao alterar o plano de fundo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Area de trabalho alterado!\n ", "ROADMAP");
+                }
+                Process.Start(navegador, caminho);
+
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //-----------------------------------RoadMap------------------------------------
 
     }
 }
