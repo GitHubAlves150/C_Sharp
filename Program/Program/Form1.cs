@@ -45,7 +45,8 @@ namespace Program
             string URL5 = "https://youglish.com/pronounce/i_have/english#google_vignette";
             string URL6 = "https://www.bbc.co.uk/learningenglish/english/features/business-jargon/241216";
             string URL7 = "https://learn.edusynch.com/toefl/practice/speaking";
-            string url8 = "https://global-exam.com/blog/pt/toefl-itp-teste-gratis/";
+            string URL8 = "https://global-exam.com/blog/pt/toefl-itp-teste-gratis/";
+            string URL9 = "https://www.nacaofluente.com/apostilas/";
 
             string navegador = "firefox.exe";
             try
@@ -69,6 +70,9 @@ namespace Program
                 Process.Start(navegador, URL4);
                 Process.Start(navegador, URL5);
                 Process.Start(navegador, URL6);
+                Process.Start(navegador, URL7);
+                Process.Start(navegador, URL8);
+                Process.Start(navegador, URL9);
             }
             catch(System.ComponentModel.Win32Exception ex)
             {
